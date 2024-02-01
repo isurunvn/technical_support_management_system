@@ -1,0 +1,392 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script&family=Ubuntu:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script&family=Ubuntu:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script&family=Roboto&family=Ubuntu:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Oleo+Script&family=Roboto&family=Ubuntu:wght@500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+
+.social-outer{
+    width: 50px;
+    height: 200px;
+    background-color: red;
+    position: fixed;
+    right: 0;
+    bottom: 175px;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+}
+
+.social-inner-wrap{
+    flex: 1;
+    /*border: 1px solid black;*/
+    position: relative;
+}
+
+.slide-context{
+    background-color: white;
+    opacity: 75%;
+    width: 130px;
+    height: 100%;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    position: absolute;
+    color: #0a3d62;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.social-inner-wrap:hover> .slide-context{
+    right: 49px;
+}
+
+.social-logo{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    position: absolute;
+    z-index: 1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-logo:hover{
+    background-color: #222f3e;
+    color: white;
+}
+
+.main-slider-outer{
+    width: 100%;
+    height: 100vh;
+    background-image: url('https://images.wallpaperscraft.com/image/single/macbook_apple_keys_161213_2560x1024.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.nav-outer{
+    width: 100%;
+    height: 70px;
+    background-color: #222f3e;
+    display: flex;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+}
+
+.logo-outer{
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-outer>img{
+    height: 65px;
+}
+
+.nav-bar-context{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.nav{
+    list-style: none;
+    display: flex;
+}
+
+.nav>li>span>a{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.nav>li{
+    border-right: 1px solid white;
+    padding: 0 25px;
+    border-bottom: 2px solid transparent;
+    transition: 0.65s ease-in-out;
+
+}
+
+.nav>li:last-child{        /* >li: nth-child(3) */
+    border-right: none;
+    padding-right: 0;
+}
+
+.nav>li:hover{
+    border-color: white;
+}
+
+.nav>li>span>a:hover{
+    color: #A58D1F;
+}
+
+.user-button{
+    padding: 6px 12px;
+    margin: 0 25px;
+    background: none;
+    border-color: #60a3bc;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 2.5px solid #daa520;
+}
+
+.user-button:hover{
+    background-color: #60a3bc;
+    color: white;
+    transform: scale(1.1);
+}
+
+.middle-text-outer{
+    width: 100%;
+    height: 150px;
+    position: relative;
+    margin-left: 10%;
+}
+
+.middle-logo{
+    height: 250px;
+    width: 250px;
+}
+
+.troubles-text{
+    font-family: 'Segoe UI', cursive;
+    color: black;
+    font-size: 50px;
+    
+}
+
+.solutions-text{
+    font-family: 'Segoe UI', cursive;
+    color: black;
+    font-size: 55px;
+    
+}
+
+.about-wrapper{
+    width: 100%;
+    height: 350px;
+    display: flex;
+}
+
+.about-inner{
+    /*border: 1px solid rebeccapurple;*/
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.about-inner>p{
+    font-size: 16px;
+    color: darkgray;
+    font-family: 'Roboto', sans-serif;
+    padding: 0 20px;
+    line-height: 30px;
+    text-align: justify;
+}
+
+.about-inner:first-child{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.service-main-outer{
+    width: 100%;
+    height: 550px;
+    display: flex;
+    margin-top: 50px;
+}
+
+.service-inner {
+    flex: 1;
+    background-size: cover;
+    background-position: center;
+}
+
+.service-inner:hover{
+    cursor: pointer;
+    margin-top: -50px;
+    transition: 0.7s ease-in-out;
+}
+
+.service-inner:first-child{
+    background-image: url("https://img.freepik.com/free-vector/customer-support-flat-design-illustration_23-2148889374.jpg?w=740&t=st=1706804439~exp=1706805039~hmac=a286b07f0b86ac29b6b4f2073a429c420780a3ce20a69fb651d31d10e73069f0");
+}
+
+.service-inner:nth-child(2){
+    background-image: url("https://img.freepik.com/free-psd/premium-mobile-phone-screen-mockup-template_53876-65705.jpg?w=740&t=st=1706804731~exp=1706805331~hmac=aef642d3da5a37eecc47de17f4c49c862f01324120a93c82c70e7e6c813ce06a");
+}
+.service-inner:nth-child(3){
+    background-image: url("https://img.freepik.com/free-photo/electronic-device-balancing-concept_23-2150422302.jpg?w=360&t=st=1706804832~exp=1706805432~hmac=0fe6135a69f4b1b856e8c79af1d3dec37c36be04b5ac995defac4be4380c4863");
+}
+
+.service-inner:nth-child(4){
+    background-image: url("https://img.freepik.com/free-photo/knowledgeable-admin-data-center-uses-laptop-prevent-system-overload-during-peak-traffic-periods-adept-expert-server-hub-ensuring-enough-network-bandwidth-smooth-operations-close-up_482257-72825.jpg?w=360&t=st=1706805080~exp=1706805680~hmac=4b5b5bd4bbe97c8d93ebea1e7b32443b0811b7e2c9b990afb2766651a5a7bc1a");
+}              
+
+.shadow-wrapper{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(15,23,43,0.5);
+    display: flex;
+    align-items: center;
+}
+
+.show-wrapper{
+    width: 100%;
+    min-height: 200px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hidden-wrapper{
+    width: 100%;
+    min-height: 200px;
+    height: auto;
+    display: none;
+}
+
+.service-inner:hover> .shadow-wrapper> .show-wrapper{
+    display: none;
+}
+
+.service-inner:hover> .shadow-wrapper> .hidden-wrapper{
+    display: flex;
+    align-items: center;
+}
+
+.show-wrapper>p>i{
+    font-size: 55px;
+}
+
+.show-wrapper>p{
+    text-align: center;
+    color: white;
+    font-size: 25px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.show-wrapper>h2{
+    text-align: center;
+    color: white;
+}
+
+.hidden-wrapper>p{
+    text-align: justify;
+    color: white;
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    padding: 0 20px;
+}
+
+.whyUs-wrapper {
+    padding-top: 100px;
+    width: 100%;
+    height: 350px;
+    /* display: flex; */
+}
+
+.whyUs-inner,
+.whyUs-inner-2,
+.whyUs-inner-3 {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.whyUs-inner > p,
+.whyUs-inner-2 > p,
+.whyUs-inner-3 > p {
+    font-size: 18px;
+    color: darkgray;
+    font-family: 'Roboto', sans-serif;
+    line-height: 30px;
+    text-align: justify;
+    padding: 0 20px;
+}
+
+.whyUs-inner {
+    order: 1;
+}
+
+.whyUs-inner-2 {
+    order: 2;
+}
+
+.whyUs-inner-3 {
+    order: 3;
+}
+
+
+footer {
+    background-color: #d3d3d3;
+    color: #737373;
+    padding: 20px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    padding: 10px;
+}
+
+.footer-section h2 {
+    font-size: 18px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 8px;
+}
+
+ul li a {
+    color: #737373;
+    text-decoration: none;
+}
+
+ul li a:hover {
+    color: #0a3d62;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px solid #555;
+}
