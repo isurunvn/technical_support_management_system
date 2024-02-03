@@ -174,14 +174,14 @@
 
 .troubles-text{
     font-family: 'Segoe UI', 'cursive';
-    color: black;
+    color: #8e44ad;
     font-size: 50px;
     
 }
 
 .solutions-text{
     font-family: 'Segoe UI', 'cursive';
-    color: black;
+    color: #8e44ad;
     font-size: 55px;
     
 }
@@ -197,10 +197,12 @@
     flex: 1;
     display: flex;
     align-items: center;
+    color: #8e44ad;
 }
 
 .about-inner>p{
     font-size: 16px;
+    font-weight: 700;
     color: darkgray;
     font-family: 'Roboto', sans-serif;
     padding: 0 20px;
@@ -310,6 +312,7 @@
     padding-top: 100px;
     width: 100%;
     height: 350px;
+    color: #8e44ad;
     /* display: flex; */
 }
 
@@ -327,7 +330,8 @@
 .whyUs-inner-2 > p,
 .whyUs-inner-3 > p {
     font-size: 18px;
-    color: #8e44ad;
+    font-weight: 1000;
+    color: black;
     font-family: 'Roboto', sans-serif;
     line-height: 30px;
     text-align: justify;
