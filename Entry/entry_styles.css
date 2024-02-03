@@ -19,7 +19,7 @@ body{
 .bg{
     width: 100vw;
     height: 100vh;
-    background-image: url("holo.jpg");
+    background-image: url("holo.gif");
     background-size: cover;
     background-position: center;
     position: fixed;
