@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="stylesheetContactUs.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+
+    <title>Contact Us</title>
+    <style>
+        img.bg{
+             position: absolute;
+             left:0px;
+             top:0px;
+             bottom: 0px;
+             width:100%;
+             height:100%;
+             z-index:-1;
+             padding-bottom: 0px;
+             }
+    </style>
+</head>
+<body>
+    <!--Navigation Bar-->
+    <div class="main_header_navbar">
+        <div class="center_navbar">
+            <div class="left_navbar">
+                <div class="main_logo">
+                    <a href="">
+                        <img class="logo" src="./images/Icon.jpg" alt="Logo">
+                    </a>
+                </div>
+                <div class="tagline">
+                    The Best Solution to Help you...
+                </div>
+            </div>
+            <div class="right_navbar">
+                <div class="search_bar">
+                    <form action="" method="post">
+                        <input type="text" placeholder="Search...">
+                    </form>
+                </div>
+                <div class="menu_navbar_left">
+                    <ul>
+                        <li>
+                            <a href="#">Home</a>
+                        </li>
+                        <li>
+                            <a href="#">KnowledgeBase</a>
+                        </li>
+                        <li>
+                            <a href="#">ContactUs</a>
+                        </li>
+                        <li>
+                            <a href="#">Issues</a>
+                        </li>
+                        <li>
+                            <a href="#">FAQ</a>
+                        </li>
+                        <li>
+                            <a href="#">Downloads</a>
+                        </li>
+                        <li>
+                            <a href="#">AboutUs</a>
+                        </li>
+                    </ul>
+                </div>    
+                    <div class="menu_navbar_right">
+                    <ul>   
+                        <li>
+                            <a href="#"><b>Login</b></a>
+                        </li>
+                        <li>
+                            <a href="#"><b>Register</b></a>
+                        </li>
+                    </ul>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Content-->
+    <img class="bg" src="./images/background3.png">
+    <div class="container">
+        <h1>Contact Us</h1>
+        <p><b>Our customer service team is waiting to assist you</b><br>Please allow up to 2-business days respose time in order for us to fully address your inquiries.</p>
+
+        <div class="contact-box">
+            <div class="contact-left">
+                <h3>Sent your request</h3>
+                <form method="POST" action=mailto:abc@gmail.com enctype="text">
+                    <h1 align="center">Feedback</h1>
+                    <fieldset>
+                    <legend><h4>Details:</h4></legend><br>
+                    Name : <input type="text" name="name" placeholder="Name" required><br><br>
+                    Email : <input type="email" name="email"placeholder="Email" required><br><br>
+                    Contact Number : <input type="text" name="contact number" placeholder="Contact Number" required><br><br>
+                    Comments : <br><textarea name="comments" rows="5" cols="20" placeholder="Please add your comments" required></textarea><br>
+                    </fieldset><br>
+                    <button type="submit"><b>Submit</b></button>
+                    </form>
+           </div>
+           <div class="contact-right">
+            <h3>Reach Us</h3>
+
+            <table>
+                <tr>
+                    <td><a href="abc@gmail.com"><img class="email" src="./images/gmail_bw.png" alt="email"></a>Email</td>
+                    <td>abc@gmail.com</td>
+                </tr>
+                <tr>
+                    <td><a href="#"><img class="connumber" src="./images/phone.png" alt="contactnumber"></a>Contact Number</td>
+                    <td>+9411 256 8480</td>
+                </tr>
+                <tr>
+                    <td><a href="https://maps.app.goo.gl/KaLwfRhz48BZENSJ9"><img class="address" src="./images/location.png" alt="Location"></a>Address</td>
+                    <td>No.5, Church Lane, <br>Colombo 05 Sri Lanka</td>
+                </tr>
+            </table>
+
+            <div class="social_media">
+                <table>
+                    <tr>
+                        <td><a href="https://web.facebook.com/"><img src="./images/facebook.png" alt="Facebook"></a></td>
+                        <td><a href="https://www.instagram.com/"><img src="./images/instagram.png" alt="Instagram"></a></td>
+                        <td><a href="https://www.linkedin.com/"><img src="./images/linkedin.png" alt="Linkedin"></a></td>
+                        <td><a href="https://www.youtube.com/"><img src="./images/youtube.png" alt="Youtube"></a></td>
+                        <td><a href="https://web.whatsapp.com/"><img src="./images/whatsapp.png" alt="Whatsapp"></a></td>
+                        <td><a href="https://www.tiktok.com/"><img src="./images/titok.png" alt="TikTok"></a></td>
+                    </tr>
+                </table>
+            </div>
+           </div>
+        </div>
+    </div>
+</body>
+</html
