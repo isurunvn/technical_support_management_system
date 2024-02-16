@@ -1,0 +1,51 @@
+.accordion {
+    background-color: #8e44ad;
+    color: #fcfcfc;
+    text-decoration: bold;
+    cursor: pointer;
+    padding: 18px;
+    width: 70%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 18px; /* Increase font size for better readability */
+    transition: 0.4s;
+    margin-bottom: 5px; /* Add space between accordion elements */
+    border-radius: 8px; /* Add rounded corners for a modern look */
+
+}
+
+.active,
+.accordion:hover {
+    background-color: #ef97fb;
+}
+
+.panel {
+    width:70%;
+    text-align:left;
+    padding: 18px;
+    display: none;
+    background-color: silver;
+    font-family: 'Roboto', sans-serif;
+    overflow: hidden;
+    border-radius: 8px; /* Add rounded corners to panels */
+    margin-bottom: 20px; /* Add space between panels */
+}
+
+.accordion-container {
+    margin-bottom:30px;
+
+}
+
+h1,p {
+    font-family: 'Ubuntu', sans-serif;
+
+}
+body{
+    background-image: url('../images/nexustech.gif');
+    background-repeat: no-repeat;
+    background-attachment: fixed;  
+    background-size: cover;
+
+}
+
