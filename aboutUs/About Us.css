@@ -1,0 +1,85 @@
+.Who_are_we{
+    background-color:#8e44ad;
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 15px;
+    width: 800px;
+    text-align: justify;
+    padding-left: 20px;
+    padding-right:20px;
+    padding-top:20px;
+    padding-bottom:20px;
+    transition:1s;
+    margin-top: 40px;
+    border:none;
+    border-radius: 10px;
+}
+
+.Who_are_we:hover{
+    opacity: 0.8 ;
+    box-shadow:10px 10px 10px gray;
+}
+
+.Our_Mission{
+    background-color:rgb(236, 232, 232);
+    color: #8e44ad;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 15px;
+    width: 800px;
+    text-align: justify;
+    padding-left: 20px;
+    padding-right:20px;
+    padding-top:20px;
+    padding-bottom:20px;
+    transition:1s;
+    margin-top: 20px;
+}
+
+.Our_Mission:hover{
+    opacity: 0.8 ;
+    box-shadow:10px 10px 10px gray;
+}
+
+.Our_Team{
+    background-color:#8e44ad;
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 15px;
+    width: 800px;
+    text-align: justify;
+    padding-left: 20px;
+    padding-right:20px;
+    padding-top:20px;
+    padding-bottom:20px;
+    transition:1s;
+    margin-top: 20px;
+    border:none;
+    border-radius: 10px;
+}
+
+.Our_Team:hover{
+    opacity: 0.8 ;
+    box-shadow:10px 10px 10px gray;
+}
+
+.Get_in_Touch{
+    background-color:rgb(236, 232, 232);
+    color: #8e44ad;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 15px;
+    width: 800px;
+    text-align: justify;
+    padding-left: 20px;
+    padding-right:20px;
+    padding-top:20px;
+    padding-bottom:20px;
+    transition:1s;
+    margin-top: 20px;
+}
+
+.Get_in_Touch:hover{
+    opacity: 0.8 ;
+    box-shadow:10px 10px 10px gray;
+}
+
+
