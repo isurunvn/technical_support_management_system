@@ -198,6 +198,10 @@
                 <button name="submit" type="submit">Signup</button>
             </center>
         </div>
+        <div class="form-footer">
+                <a href="login.php">Registered or already have an account? </a>
+            </div>
+
 
         </form>
         

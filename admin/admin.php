@@ -1,3 +1,19 @@
+<?php
+session_start(); // Start the session
+
+// Check if user is logged in
+if (!isset($_SESSION['username'])) {
+    // Redirect to login page if not logged in
+    header("Location: ../login.php");
+    exit;
+}
+
+// Access username and email from session
+$username = $_SESSION['username'];
+$email = $_SESSION['email'];
+?>
+
+
 <html>
 <head>
     <title>Admin Page - NexusTech Solutions</title>
@@ -5,8 +21,10 @@
 </head>
 <body>
     <header>
-        <h1>Welcome, Administrator!</h1>
-        <button class="logout-button">Logout</button>
+        <h1>Welcome, <?php echo $username; ?> as Administrator!</h1>
+        <a href="../Entry/entry.html" class="logout-link">
+            <button class="logout-button">Logout</button>
+        </a>
     </header>
     <main>
         <section>

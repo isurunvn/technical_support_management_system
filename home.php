@@ -1,3 +1,18 @@
+<?php
+session_start(); // Start the session
+
+// Check if user is logged in
+if (!isset($_SESSION['username'])) {
+    // Redirect to login page if not logged in
+    header("Location: ../login.php");
+    exit;
+}
+
+// Access username and email from session
+$username = $_SESSION['username'];
+$email = $_SESSION['email'];
+?>
+
 <html>
 <head>
 <title></title>
@@ -42,7 +57,12 @@
                     <li><span><a href="">Contact Us</a></span></li>
                     <li><span><a href="">About Us</a></span></li>
                 </ul>
-                <button class="user-button"><i class="fa-solid fa-user"></i>  user</button>
+                <div class="user-dropdown">
+                    <button class="user-button"><i class="fa-solid fa-user"><p><?php echo $username; ?></p></i></button>
+                    <div class="dropdown-content">
+                        <a href="Entry/entry.html">Logout</a>
+                    </div>
+                </div>            
             </div>
             <div class="nav-bar-outer"></div>
         </div>

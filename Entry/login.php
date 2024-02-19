@@ -1,4 +1,6 @@
-<?php require_once('../config.php'); ?>
+<?php 
+session_start();
+require_once('../config.php'); ?>
 
 <?php
 
@@ -13,12 +15,16 @@
 
         while ($record = mysqli_fetch_assoc($result_log)){
             if($record['password'] == $Password){
+
+                $_SESSION['username'] = $record['username'];
+                $_SESSION['email'] = $record['email'];
+
                 if($record['role'] == 'admin'){
-                    echo "<script>alert('You are an admin!');</script>";
-                    // header("Location: ../home.html");
+                    header("Location: ../admin/admin.php");
+                    exit;
                 }else{
-                    echo "<script>alert('You are a normal user');</script>";
-                    // header("Location: ../home.html");
+                    header("Location: ../home.php");
+                    exit;
                 }
             }
         }
@@ -177,7 +183,6 @@
                 </center>    
             </div>
             <div class="form-footer">
-                <p>Login as <a href="adminlogin.html">Admin</a></p>
                 <p>Don't have an account? <a href="signup.php">Sign up</a></p>
                 <p><a href="#">Forgot password?</a></p>
             </div>
