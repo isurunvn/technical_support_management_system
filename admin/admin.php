@@ -1,5 +1,5 @@
 <?php
-session_start(); // Start the session
+session_start(); 
 
 // Check if user is logged in
 if (!isset($_SESSION['username'])) {
@@ -8,11 +8,22 @@ if (!isset($_SESSION['username'])) {
     exit;
 }
 
-// Access username and email from session
 $username = $_SESSION['username'];
 $email = $_SESSION['email'];
-?>
 
+$servername = "localhost"; 
+$username_db = "root"; 
+$password_db = ""; 
+$database = "nexustech"; 
+
+$conn = new mysqli($servername, $username_db, $password_db, $database);
+
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+
+ ?>
 
 <html>
 <head>
@@ -30,9 +41,9 @@ $email = $_SESSION['email'];
         <section>
             <h2>Manage Users</h2>
             <ul>
-                <li><button>Add User</button></li>
-                <li><button>Edit User</button></li>
-                <li><button>Delete User</button></li>
+                <li><a href="view_users.php"><button>View Users</button></a></li>
+                <li><a href="add_user.php"><button>Add User</button></a></li>
+                <li><a href="delete_user.php"><button>Delete User</button></a></li>
             </ul>
         </section>
         <section>
@@ -49,3 +60,8 @@ $email = $_SESSION['email'];
     </footer>
 </body>
 </html>
+
+<?php
+// Close MySQL connection
+$conn->close();
+?>
