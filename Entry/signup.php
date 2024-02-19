@@ -1,13 +1,39 @@
+<?php require_once('../config.php'); ?>
+
+<?php
+
+    if (isset($_POST['submit'])){
+
+        $Username = $_POST['username'];
+        $Email = $_POST['email'];
+        $Password = $_POST['password'];
+
+        $query = "INSERT INTO users (username, email, password) VALUES ('$Username', '$Email', '$Password')";
+
+        $result = mysqli_query($conn, $query);
+
+        if($result) {
+            echo "<script>alert('Account created successfully!');</script>";
+        } else {
+            echo "<script>alert('Account creation failed!');</script>";        }
+    }
+
+    
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
+    <title>Signup</title>
     <style>
         body {
-            font-family: 'Segoe UI', 'cursive';
+            font-family: 'Segoe UI';
             background-color: black;
             margin: 0;
             display: flex;
@@ -15,7 +41,7 @@
             justify-content: center;
             height: 100vh;
         }
-
+        
         .blurry-background {
             width: 100vw;
             height: 100vh;
@@ -30,8 +56,8 @@
         }
         .container {
             background-color: #ececec;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
             overflow: hidden;
             width: 400px;
             max-width: 100%;
@@ -43,11 +69,17 @@
             text-align: center;
             padding: 20px;
         }
+        .form-group {
+            padding: 5px 20px 20px 20px;
+        }
 
         .form-group1 {
             padding: 20px 20px 5px 20px;
         }
         .form-group2 {
+            padding: 15px 20px 5px 20px;
+        }
+        .form-group3 {
             padding: 15px 20px 5px 20px;
         }
 
@@ -57,6 +89,11 @@
             color: #333;
         }
         .form-group2 label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+        }
+        .form-group3 label {
             display: block;
             margin-bottom: 8px;
             color: #333;
@@ -78,6 +115,15 @@
             border-radius: 4px;
             box-sizing: border-box;
         }
+        .form-group3 input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
 
         .form-group button {
             font-family: 'Segoe UI';
@@ -116,38 +162,48 @@
             text-align: center;
             border-top: 1px solid #8e44ad;
         }
-
+        footer a:hover {
+            text-decoration: underline;
+        }
+              
     </style>
 </head>
 
 <body>
-    <div class="blurry-background">
+    <div class="blurry-background"></div>
 
-    </div>
-    <div class="container">
+            
+        <div class="container">
+
+        <form action="signup.php" method="post">
+
         <div class="form-header">
-            <h2>Login</h2>
+            <h2>Signup</h2>
         </div>
         <div class="form-group1">
             <label for="username">Username:</label>
             <input type="text" id="username" name="username" required>
         </div>
+
         <div class="form-group2">
+            <label for="email">e-mail:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group3">
             <label for="password">Password:</label>
             <input type="password" id="password" name="password" required>
         </div>
         <div class="form-group">
             <center>
-                <button type="submit">Login</button>
-            </center>    
+                <button name="submit" type="submit">Signup</button>
+            </center>
         </div>
-        <div class="form-footer">
-            <p>Login as <a href="adminlogin.html">Admin</a></p>
-            <p>Don't have an account? <a href="signin.html">Sign up</a></p>
-            <p><a href="#">Forgot password?</a></p>
+
+        </form>
+        
         </div>
-    </div>
-    <footer >
+
+    <footer>
         <p>&copy; 2024 NexusTech Solutions</p>
     </footer>
 </body>
