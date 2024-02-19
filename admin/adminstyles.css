@@ -1,0 +1,74 @@
+/* adminstyles.css */
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+}
+
+header {
+    background-color: #8e44ad;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.logout-button {
+    float: right;
+    margin-right: 20px;
+}
+
+main {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+
+section {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    color: #8e44ad;
+    margin-bottom: 10px;
+}
+
+section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+button {
+    background-color: #8e44ad;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #6c3483;
+}
+
+section ul li button {
+    display: block;
+    width: 100%;
+    text-align: left;
+    margin: 5px 0;
+}
+
+footer {
+    background-color: #343a40;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

@@ -141,7 +141,11 @@
     color: #f5cd79;
 }
 
-.user-button{
+.user-dropdown {
+    position: relative;
+}
+
+.user-button {
     padding: 6px 12px;
     margin: 0 25px;
     background: none;
@@ -151,10 +155,44 @@
     cursor: pointer;
 }
 
-.user-button:hover{
+.user-button:hover {
     background-color: #f39c12;
     color: white;
     transform: scale(1.1);
+}
+
+.user-button > p{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 100;
+    font-family: 'Segoe UI', 'cursive';
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(142, 68, 173, 0.8);
+    border-radius: 10px;
+    min-width: 120px;
+    z-index: 1;
+    top: 100%;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f39c12;
+    border-radius: 10px;
+}
+
+.user-dropdown:hover .dropdown-content {
+    display: block;
 }
 
 .middle-text-outer{

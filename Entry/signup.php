@@ -1,3 +1,29 @@
+<?php require_once('../config.php'); ?>
+
+<?php
+
+    if (isset($_POST['submit'])){
+
+        $Username = $_POST['username'];
+        $Email = $_POST['email'];
+        $Password = $_POST['password'];
+
+        $query = "INSERT INTO users (username, email, password) VALUES ('$Username', '$Email', '$Password')";
+
+        $result = mysqli_query($conn, $query);
+
+        if($result) {
+            echo "<script>alert('Account created successfully!');</script>";
+        } else {
+            echo "<script>alert('Account creation failed!');</script>";        }
+    }
+
+    
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -144,12 +170,15 @@
 </head>
 
 <body>
-    <div class="blurry-background">
+    <div class="blurry-background"></div>
 
-    </div>
-    <div class="container">
+            
+        <div class="container">
+
+        <form action="signup.php" method="post">
+
         <div class="form-header">
-            <h2>Sign In</h2>
+            <h2>Signup</h2>
         </div>
         <div class="form-group1">
             <label for="username">Username:</label>
@@ -166,11 +195,22 @@
         </div>
         <div class="form-group">
             <center>
+<<<<<<< HEAD:Entry/signin.html
                 <button type="submit">Signup</button>
+=======
+                <button name="submit" type="submit">Signup</button>
+>>>>>>> af1cba096bb510707e8e3f12ba7a10513ec3d81f:Entry/signup.php
             </center>
         </div>
+        <div class="form-footer">
+                <a href="login.php">Registered or already have an account? </a>
+            </div>
 
-    </div>
+
+        </form>
+        
+        </div>
+
     <footer>
         <p>&copy; 2024 NexusTech Solutions</p>
     </footer>
