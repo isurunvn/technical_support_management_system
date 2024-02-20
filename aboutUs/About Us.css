@@ -110,6 +110,7 @@
 
 .DP{
     width: 200px;
+    height:200px;
     display: flex;
 }
 
@@ -118,8 +119,8 @@
     display: inline-block;
     text-align: center;
     vertical-align: top;
-    margin-left: 50px;
-    margin-top: 50px;
+    padding-left: 10px;
+    padding-right: 43px;
 }
 
 .name{
