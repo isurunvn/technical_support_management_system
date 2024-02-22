@@ -195,11 +195,7 @@
         </div>
         <div class="form-group">
             <center>
-<<<<<<< HEAD:Entry/signin.html
-                <button type="submit">Signup</button>
-=======
                 <button name="submit" type="submit">Signup</button>
->>>>>>> af1cba096bb510707e8e3f12ba7a10513ec3d81f:Entry/signup.php
             </center>
         </div>
         <div class="form-footer">
