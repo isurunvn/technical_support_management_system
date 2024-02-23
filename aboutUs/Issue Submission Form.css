@@ -1,0 +1,55 @@
+h1{
+    text-align: center;
+}
+
+.first_name{
+    margin-top: 1px;
+    align-items: center;
+    text-align: center;
+}
+
+.first_name label{
+        position: absolute;
+        padding-left: 10px;
+}
+
+.last_name{
+    margin-top: 5px;
+    align-items: center;
+    text-align: center;
+}
+
+.last_name label{
+    position: absolute;
+    padding-left: 10px;
+}
+
+.email{
+    margin-top: 5px;
+    align-items: center;
+    text-align: center;
+}
+
+.email label{
+    position: absolute;
+    padding-left: 10px;
+}
+
+.Phone_no{
+    margin-top: 5px;
+    align-items: center;
+    text-align: center;
+}
+
+.Phone_no label{
+    position: absolute;
+    padding-left: 10px;
+}
+
+.Problem_cat{
+    margin-top: 5px;
+    align-items: center;
+    text-align: center; 
+}
+
+
