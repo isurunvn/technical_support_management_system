@@ -157,26 +157,23 @@ h1{
 
 }
 
-.upload{
-    margin-top: 40px;
 
-}
-
-.submit{
+.submit_button{
         margin-top: 60px;
+        display: flex;
+        justify-content: center;
+        width: 85%;
 }
 
-
+input[type="submit"]{
+    background-color: #8e44ad;
+}
 
 .ticket_submission{
     background-color:rgba(142, 68, 173, 0.8);
     color:rgb(236, 232, 232) ;
     border-color:#6a1191;
     border-radius: 10px;
-    align-items: center;
-    justify-content: center;
-    align-items: center;
-    margin-top: 120px;
     width: 610px;
     padding-top: 20px;
     margin:auto;
@@ -186,11 +183,20 @@ h1{
     border: solid;
     border-color: #6a1191;
     margin-bottom: 50px;
+    padding-left: 30px;
+    
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .details{
-    margin-left: 10%;
+    margin-left: 35px;
     padding-top: 10px;
+    width: 100%;
 }
 label{
     font-size: 25px;
@@ -199,27 +205,48 @@ label{
 input[type="text"] {
     font-size: 20px;
     width: 500px;
+    border-radius: 10px;
+    padding: 5px 10px;
 }
 
 input[type="email"] {
     font-size: 20px;
     width: 500px;
+    border-radius: 10px;
+    padding: 5px 10px;
 }
 
 input[type="tel"] {
     font-size: 20px;
     width: 500px;
-}
-
-input[type="file"] {
-    font-size: 20px;
-    width: 500px;
+    border-radius: 10px;
+    padding: 5px 10px;
 }
 
 input[type="submit"] {
     font-size: 30px;
+    width: 100%;
+    color: white    ;
+    border-radius: 10px;
+    padding: 5px 10px;
+}
+
+input[type="submit"]:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: 1s;
+    background-color: #6c3483;
+}
+
+textarea {
+    font-size: 20px;
     width: 500px;
-    color: #6a1191;
+    border-radius: 10px;
+    padding: 5px 10px;
+}
+
+.textbox{
+    height: 100px;
 }
 
 footer {

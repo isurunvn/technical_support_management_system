@@ -1,3 +1,30 @@
+<?php
+session_start(); 
+
+// Check if user is logged in
+if (!isset($_SESSION['username'])) {
+    // Redirect to login page if not logged in
+    header("Location: ../login.php");
+    exit;
+}
+
+$username = $_SESSION['username'];
+$email = $_SESSION['email'];
+
+$servername = "localhost"; 
+$username_db = "root"; 
+$password_db = ""; 
+$database = "nexustech"; 
+
+$conn = new mysqli($servername, $username_db, $password_db, $database);
+
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+
+ ?>
+ 
 <!DOCTYPE html>
 <html>
 <head>
@@ -67,7 +94,7 @@
 
         <div class="Problem_cat">
         <label for="cars">Problem Category:</label><br>
-        <select id="Problem Category" name="problem" required style="width: 507px; height: 32px; font-size: 20px;">
+        <select id="Problem Category" name="problem" required style="width: 507px; height: 32px; font-size: 20px;  border-radius: 10px;">
         <option style="font-size: 20px;" value="">Please Select</option>
         <option style="font-size: 20px;" value="Computer">Computer</option>
         <option style="font-size: 20px;" value="Email">Email</option>
@@ -78,25 +105,17 @@
        </div>
        
        <div class="Discription">
-        <label for="text">Please explain the issue you're experiencing <br>
+        <label for="multiline-input">Please explain the issue you're experiencing <br>
             (with as much detail as possible):</label><br>
-        <input type="text" class="textbox" required placeholder="Enter text here..." >
-       </div>
-
-       <div class="upload">
-        <label for="myFile" >Upload Image</label><br>
-        <input type="file" class="file-input" required>
+        <textarea id="multiline-input" name="multiline-input" rows="5" cols="50"></textarea>
        </div>
         
-       <div class="submit">
+       <div class="submit_button">
        <form action="/submit" method="post">
        <input type="submit" value="Submit">
        </div>
 </form>
        </div>
-
-      </form>
-      </div>
 
       </div>
 
