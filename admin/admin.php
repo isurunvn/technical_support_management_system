@@ -43,6 +43,7 @@ if ($conn->connect_error) {
             <ul>
                 <li><a href="view_users.php"><button>View Users</button></a></li>
                 <li><a href="add_user.php"><button>Add User</button></a></li>
+                <li><a href="search_user.php"><button>Update User</button></a></li>
                 <li><a href="delete_user.php"><button>Delete User</button></a></li>
             </ul>
         </section>
