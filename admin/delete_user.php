@@ -40,6 +40,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body>
     <header>
         <h1>Welcome, <?php echo $username; ?> as Administrator!</h1>
+        <a href="admin.php" class="back-link">
+            <button class="back-button">Back to dashboard</button>
+        </a>
         <a href="../Entry/entry.html" class="logout-link">
             <button class="logout-button">Logout</button>
         </a>
