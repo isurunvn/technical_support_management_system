@@ -10,16 +10,13 @@ require_once('../config.php'); ?>
         $Email = $_POST['email'];
         $Password = $_POST['password'];
 
-        $query = "SELECT * FROM users WHERE username='$Username' AND email='$Email'";
+        $psquery="UPDATE users SET password = '$Password' WHERE username = '$Username' AND email = '$Email'";
+        $psquery = mysqli_query($conn, $psquery);
 
-        $result = mysqli_query($conn, $query);
-
-        if(($result)){
-            $psquery="UPDATE users SET password='$Password' WHERE username='$Username' AND email='$Email'";
-            if(($psquery)){
-                echo "<script>alert('Password updated');</script>";
+        if(($psquery)){
+            echo "<script>alert('Password updated');</script>";
         }        
-        }else{
+        else{
             echo "<script>alert('Invalid username or email!');</script>";
         }
     }
@@ -72,7 +69,7 @@ require_once('../config.php'); ?>
             padding: 20px;
         }
         .form-group {
-            padding: 5px 20px 20px 20px;
+            padding: 5px 20px 0px 20px;
         }
 
         .form-group1 {
@@ -83,6 +80,9 @@ require_once('../config.php'); ?>
         }
         .form-group3 {
             padding: 15px 20px 5px 20px;
+        }
+        .showp {
+            padding: 0px 0px 5px 20px;
         }
 
         .form-group1 label {
@@ -100,6 +100,12 @@ require_once('../config.php'); ?>
             margin-bottom: 8px;
             color: #333;
         }
+        .showp label {
+            display: inline;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
 
         .form-group1 input {
             width: 100%;
@@ -144,7 +150,7 @@ require_once('../config.php'); ?>
 
         .form-footer {
             text-align: center;
-            padding: 20px;
+            padding: 5px;
         }
 
         .form-footer a {
@@ -164,6 +170,7 @@ require_once('../config.php'); ?>
             text-align: center;
             border-top: 1px solid #8e44ad;
         }
+
         footer a:hover {
             text-decoration: underline;
         }
@@ -190,8 +197,21 @@ require_once('../config.php'); ?>
                 <input type="email" id="email" name="email" required>
             </div>
             <div class="form-group3">
-                <label for="password">Password:</label>
+                <label for="password">New Password:</label>
                 <input type="password" id="password" name="password" required>
+            </div>
+            <div class="showp">
+            
+            <label for="showpassword">Show Password</label>
+            <input type="checkbox" onclick="myFunction()">
+            <script> function myFunction() {    
+                var x = document.getElementById("password");
+                if (x.type === "password") {
+                    x.type = "text";
+                } else {
+                    x.type = "password";
+                }
+            }</script>
             </div>
             <div class="form-group">
                 <center>
