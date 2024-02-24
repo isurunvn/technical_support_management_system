@@ -1,3 +1,18 @@
+<?php
+session_start(); // Start the session
+
+// Check if user is logged in
+if (!isset($_SESSION['username'])) {
+    // Redirect to login page if not logged in
+    header("Location: ../login.php");
+    exit;
+}
+
+// Access username and email from session
+$username = $_SESSION['username'];
+$email = $_SESSION['email'];
+?>
+
 <html>
 <head>
 <title></title>
@@ -30,12 +45,11 @@
     <div class="main-slider-outer" >
         <div class="nav-outer">
             <div class="logo-outer">
-                <img class="main-slider-logo" src="images/logo-3.png"
-                     alt="logo img">
+                <a href="home.html"><img class="main-slider-logo" src="images/logo-3.png" alt="logo img"></a>
             </div>
             <div class="nav-bar-context">
                 <ul class="nav">
-                    <li><span><a href="">Home</a></span></li>
+                    <li><span><a href="home.html">Home</a></span></li>
                     <li><span><a href="">Tech Services</a></span></li>
                     <li><span><a href="">Ticket Submission</a></span></li>
                     <li><span><a href="">Downloads</a></span></li>
@@ -43,7 +57,12 @@
                     <li><span><a href="">Contact Us</a></span></li>
                     <li><span><a href="">About Us</a></span></li>
                 </ul>
-                <button class="user-button"><i class="fa-solid fa-user"></i>  user</button>
+                <div class="user-dropdown">
+                    <button class="user-button"><i class="fa-solid fa-user"><p><?php echo $username; ?></p></i></button>
+                    <div class="dropdown-content">
+                        <a href="Entry/entry.html">Logout</a>
+                    </div>
+                </div>            
             </div>
             <div class="nav-bar-outer"></div>
         </div>
@@ -89,6 +108,9 @@
             </p>
         </div>
     </div>
+
+
+
     
 
     <div class="service-main-outer">
@@ -96,7 +118,7 @@
             <div class="shadow-wrapper">
                 <div class="show-wrapper">
                     <p><i class="fa-solid fa-gear"></i></p>
-                    <h2>Our Technical Services</h2>
+                    <h2>Technical Advices</h2>
                 </div>
                 <div class="hidden-wrapper">
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum magnam nostrum odit rerum suscipit?
@@ -191,17 +213,46 @@
         </div>
     </div>
 
+    <div class="support-outer">
+                <div class="support-circles">
+                    <div class="support-circles-single">
+                        <div class="support-circles-image">
+                            <img src="./images/support-image-1.svg">
+                        </div>
+                        <div class="support-circles-name">Active support</div>
+                    </div>
+                    <div class="support-circles-single">
+                        <div class="support-circles-image">
+                            <img src="./images/support-image-2.svg">
+                        </div>
+                        <div class="support-circles-name">Instant support</div>
+                    </div>
+                    <div class="support-circles-single">
+                        <div class="support-circles-image">
+                            <img src="./images/support-image-3.svg">
+                        </div>
+                        <div class="support-circles-name">Connecting Teams</div>
+                    </div>
+                    <div class="support-circles-single">
+                        <div class="support-circles-image">
+                            <img src="./images/support-image-4.svg">
+                        </div>
+                        <div class="support-circles-name">Visionary technology</div>
+                    </div>
+                </div>
+    </div>
+
     <footer>
         <div class="footer-content">
             <div class="footer-section">
                 <h2>Contact Us</h2>
-                <p>Email: support@example.com</p>
+                <p>Email: nexustech@support.com</p>
                 <p>Phone: +1 123 456 7890</p>
             </div>
             <div class="footer-section">
                 <h2>Quick Links</h2>
                 <ul>
-                    <li><a href="#">Home</a></li>
+                    <li><a href="home.html">Home</a></li>
                     <li><a href="#">Tech Support</a></li>
                     <li><a href="#">Ticket Submission</a></li>
                     <li><a href="#">Downloads</a></li>
