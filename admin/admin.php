@@ -1,25 +1,17 @@
 <?php
 session_start(); 
+require_once('../config.php'); ?>
+
+
+<?php
+$username = $_SESSION['username'];
+$email = $_SESSION['email'];
 
 // Check if user is logged in
 if (!isset($_SESSION['username'])) {
     // Redirect to login page if not logged in
     header("Location: ../login.php");
     exit;
-}
-
-$username = $_SESSION['username'];
-$email = $_SESSION['email'];
-
-$servername = "localhost"; 
-$username_db = "root"; 
-$password_db = ""; 
-$database = "nexustech"; 
-
-$conn = new mysqli($servername, $username_db, $password_db, $database);
-
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
 }
 
 

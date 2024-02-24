@@ -1,21 +1,15 @@
 <?php
-session_start(); // Start the session
+session_start(); 
+require_once('../config.php'); ?>
+
+
+<?php
+$username = $_SESSION['username'];
+$email = $_SESSION['email'];
 
 $username = $_SESSION['username'];
 $email = $_SESSION['email'];
 
-$servername = "localhost"; 
-$username_db = "root"; 
-$password_db = ""; 
-$database = "nexustech"; 
-
-
-$conn = new mysqli($servername, $username_db, $password_db, $database);
-
-
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
 
 // Query to select all users
 $sql = "SELECT * FROM users";
