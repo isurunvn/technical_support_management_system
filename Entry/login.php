@@ -89,7 +89,9 @@ require_once('../config.php'); ?>
         .form-group2 {
             padding: 15px 20px 5px 20px;
         }
-
+        .showp {
+            padding: 0px 0px 5px 20px;
+        }
         .form-group1 label {
             display: block;
             margin-bottom: 8px;
@@ -100,6 +102,12 @@ require_once('../config.php'); ?>
             margin-bottom: 8px;
             color: #333;
         }
+        .showp label {
+            display: inline;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
 
         .form-group1 input {
             width: 100%;
@@ -176,6 +184,19 @@ require_once('../config.php'); ?>
             <div class="form-group2">
                 <label for="password">Password:</label>
                 <input type="password" id="password" name="password" required>
+            </div>
+            <div class="showp">
+            
+            <label for="showpassword">Show Password</label>
+            <input type="checkbox" onclick="myFunction()">
+            <script> function myFunction() {    
+                var x = document.getElementById("password");
+                if (x.type === "password") {
+                    x.type = "text";
+                } else {
+                    x.type = "password";
+                }
+            }</script>
             </div>
             <div class="form-group">
                 <center>
