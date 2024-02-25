@@ -87,12 +87,12 @@
             <div class="social_media">
                 <table>
                     <tr>
-                        <td><a href="https://web.facebook.com/"><img src="./images/facebook.png" alt="Facebook"></a></td>
-                        <td><a href="https://www.instagram.com/"><img src="./images/instagram.png" alt="Instagram"></a></td>
-                        <td><a href="https://www.linkedin.com/"><img src="./images/linkedin.png" alt="Linkedin"></a></td>
-                        <td><a href="https://www.youtube.com/"><img src="./images/youtube.png" alt="Youtube"></a></td>
-                        <td><a href="https://web.whatsapp.com/"><img src="./images/whatsapp.png" alt="Whatsapp"></a></td>
-                        <td><a href="https://www.tiktok.com/"><img src="./images/titok.png" alt="TikTok"></a></td>
+                        <td><a href="https://web.facebook.com/" target="_blank"><img src="./images/facebook.png" alt="Facebook"></a></td>
+                        <td><a href="https://www.instagram.com/" target="_blank"><img src="./images/instagram.png" alt="Instagram"></a></td>
+                        <td><a href="https://www.linkedin.com/" target="_blank"><img src="./images/linkedin.png" alt="Linkedin"></a></td>
+                        <td><a href="https://www.youtube.com/" target="_blank"><img src="./images/youtube.png" alt="Youtube"></a></td>
+                        <td><a href="https://web.whatsapp.com/" target="_blank"><img src="./images/whatsapp.png" alt="Whatsapp"></a></td>
+                        <td><a href="https://www.tiktok.com/" target="_blank"><img src="./images/titok.png" alt="TikTok"></a></td>
                     </tr>
                 </table>
             </div>
