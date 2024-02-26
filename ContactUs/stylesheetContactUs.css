@@ -1,11 +1,11 @@
 *{
     margin: 0px;
     padding: 0px;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 body{
     font-size: 14px;
-    font-family: 'Poppins', sans-serif;
 }
 
 /*Header*/
