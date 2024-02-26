@@ -5,10 +5,6 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="stylesheetContactUs.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
-
     <title>Contact Us</title>
     <style>
         img.bg{
@@ -27,7 +23,7 @@
     <!--Header-->
     <div class="nav-outer">
         <div class="logo-outer">
-            <img class="main-slider-logo" src="images/logo-3.png"
+            <img class="main-slider-logo" src="./images/logo-3.png"
                  alt="logo img">
         </div>
         <div class="nav-bar-context">
