@@ -7,12 +7,6 @@ require_once('../config.php'); ?>
 $username = $_SESSION['username'];
 $email = $_SESSION['email'];
 
-// Access username and email from session
-$username = $_SESSION['username'];
-$email = $_SESSION['email'];
-
-
-// Check if the form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['update_user'])) {
     $user_id = $_POST['user_id'];
     $new_username = isset($_POST['new_username']) ? $_POST['new_username'] : '';
@@ -23,7 +17,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['update_user'])) {
     if (empty($new_username) || empty($new_email) || empty($new_role)) {
         echo "<script>alert(Error: Please fill in all required fields.);</script>";
     } else {
-        // Update user details in the database
         $sql = "UPDATE users SET username='$new_username', email='$new_email', role='$new_role' WHERE id='$user_id'";
         if ($conn->query($sql) === TRUE) {
             echo "<script>alert('User details updated successfully');</script>";

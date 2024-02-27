@@ -7,15 +7,13 @@ require_once('../config.php'); ?>
 $username = $_SESSION['username'];
 $email = $_SESSION['email'];
 
-// Handle add user form submission
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (isset($_POST['add_user'])) {
         $new_username = $_POST['new_username'];
         $new_email = $_POST['new_email'];
-        $new_password = $_POST['new_password']; // Make sure to hash the password securely before storing it in the database
+        $new_password = $_POST['new_password'];
         $new_role = $_POST['new_role'];
 
-        // Insert new user into the database
         $sql = "INSERT INTO users (username, email, password, role) VALUES ('$new_username', '$new_email', '$new_password', '$new_role')";
         
         if ($conn->query($sql) === TRUE) {
@@ -71,6 +69,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </html>
 
 <?php
-// Close MySQL connection
 $conn->close();
 ?>

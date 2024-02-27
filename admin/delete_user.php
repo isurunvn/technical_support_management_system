@@ -7,16 +7,11 @@ require_once('../config.php'); ?>
 $username = $_SESSION['username'];
 $email = $_SESSION['email'];
 
-// Access username and email from session
-$username = $_SESSION['username'];
-$email = $_SESSION['email'];
-
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (isset($_POST['delete_user'])) {
         $delete_username = $_POST['delete_username'];
 
-        // Delete user from the database
         $sql = "DELETE FROM users WHERE username='$delete_username'";
         
         if ($conn->query($sql) === TRUE) {
@@ -62,6 +57,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </html>
 
 <?php
-// Close MySQL connection
 $conn->close();
 ?>
