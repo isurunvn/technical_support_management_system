@@ -1,5 +1,24 @@
-/*nav bar */
-.nav-outer{
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: white;
+}
+
+.content-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-outer {
     width: 100%;
     height: 70px;
     background-color: rgba(142, 68, 173, 0.8);
@@ -9,30 +28,30 @@
     z-index: 2;
 }
 
-.logo-outer{
+.logo-outer {
     width: 200px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.logo-outer>img{
+.logo-outer>img {
     height: 65px;
 }
 
-.nav-bar-context{
+.nav-bar-context {
     flex: 1;
     display: flex;
     align-items: center;
     justify-content: flex-end;
 }
 
-.nav{
+.nav {
     list-style: none;
     display: flex;
 }
 
-.nav>li>span>a{
+.nav>li>span>a {
     color: white;
     text-decoration: none;
     font-size: 18px;
@@ -40,110 +59,178 @@
     font-family: 'Ubuntu', sans-serif;
 }
 
-.nav>li{
+.nav>li {
     border-right: 1px solid white;
     padding: 0 25px;
     border-bottom: 2px solid transparent;
     transition: 0.65s ease-in-out;
-
 }
 
-.nav>li:last-child{        /* >li: nth-child(3) */
+.nav>li:last-child {
     border-right: none;
     padding-right: 0;
 }
 
-.nav>li:hover{
+.nav>li:hover {
     border-color: white;
 }
 
-.nav>li>span>a:hover{
+.nav>li>span>a:hover {
     color: #f5cd79;
 }
 
+.title{
+    font-size: 30px;
+    text-align: center;
+    margin-top: 120px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    font-family: 'Ubuntu', sans-serif;
+}
 
-.user-button{
-    padding: 6px 12px;
-    margin: 0 25px;
-    background: none;
-    border: none;
-    color: white;
-    border-radius: 5px;
+.container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.card {
+    position: relative;
+    width: 350px;
+    padding: 20px;
+    margin: 30px;
+    background-color: #424242;
+    border-radius: 25px;
+    margin-bottom: 10px;
+    transition: max-height 0.5s ease-in-out;
+    overflow: hidden;
+}
+
+
+
+.card.active .content {
+    display: block;
+}
+
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: 20px solid transparent;
+    height: 100px;
+}
+
+.card.active::before {
+    border: 20px solid transparent;
+}
+
+.icon {
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    margin-bottom: 10px;
+}
+
+.icon img {
+    max-width: 228px;
+}
+
+.card.active .content {
+    height: auto;
+}
+
+.content {
+    position: relative;
+    height: 215px;
+    overflow: hidden;
+}
+
+.content::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    left: 0;
+    bottom: 0;
+    background: linear-gradient(transparent, #3f3f3f);
+}
+
+.card.active .content::before {
+    display: none;
+}
+
+.content h3 {
+    color: rgba(234, 185, 255, 0.8);
+    font-size: 1.4em;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.content p {
+    color: #ccc;
+    font-weight: 300;
+}
+
+.card .more {
+    position: relative;
+    padding: 10px 15px;
+    background: #b6c4d7;
+    display: inline-block;
+    text-transform: uppercase;
+    color: #383838;
+    font-weight: 500;
+    letter-spacing: 2px;
+    font-size: 14px;
     cursor: pointer;
+    text-decoration: none;
 }
 
-.user-button:hover{
-    background-color: #f39c12;
-    color: white;
-    transform: scale(1.1);
-}
-* {
-  box-sizing: border-box;
+.card.active .more {
+    background:#a3d9ff;
+    color: black;
 }
 
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+.card .more::before {
+    content: 'Read More';
 }
 
-/* The grid: Three equal columns that floats next to each other */
-.column {
-  float:left;
-  width: 31.33% ;
-  height:80px ; 
-  padding:  10px;
-  text-align: center;
-  font-size: 25px;
-  cursor: pointer;
-  color: white;
-  background-color: rgba(142, 68, 173, 0.8);
-  margin:10px;
-  
+.card.active .more::before {
+    content: 'Read Less';
 }
 
-.containerTab {
-  padding: 20px;
-  color: rgb(0, 0, 0);
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: #bdc8d4;
+.card a:hover {
+    font-size: 14px;
+    border: 1px solid #e8eff7;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
 }
 
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Closable button inside the container tab */
-.closebtn {
-  float: right;
-  color: rgb(0, 0, 0);
-  font-size: 35px;
-  cursor: pointer;
-}
-
-/*download button>*/
-.btn{
+.btn {
     background-color: #7a16a5;
     border: none;
-    color:white;
-    padding: 12px 30px;
+    color: white;
+    padding: 3px 10px;
     cursor: pointer;
     font-size: 20px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Ubuntu', sans-serif;
 }
 
-.btn:hover{
+.btn:hover {
     background-color: #c486df;
+    transition: background-color 0.3s ease;
 }
-
-/* footer*/
 
 footer {
     background-color: #d3d3d3;
     color: #576574;
     padding: 20px 0;
+    text-align: center;
 }
 
 .footer-content {
@@ -184,48 +271,4 @@ ul li a:hover {
     margin-top: 20px;
     padding-top: 10px;
     border-top: 1px solid #8e44ad;
-}
-
-*{ 
-    box-sizing: border-box;
-}
-.mySlides {
-    display: none;
-}
-img {
-    vertical-align: middle;
-}
-
-/*slide show container */
-.slideshow-container{
-    max-width: 800px;
-    max-height: 600px;
-    position: relative;
-    margin: auto;
-}
-
-/*dots */
-.dot{
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #8e44ad;
-    border-radius: 50%;
-    display:inline-block;
-    transition: background-color 0.6s ease;
-}
-
-.active{
-    background-color: #c486df;
-}
-
-/*fading animation*/
-.fade{
-    animation-name: fade;
-    animation-duration: 0.8s;
-}
-
-@keyframes fade{
-    from {opacity: .4}
-    to {opacity: .1}
 }

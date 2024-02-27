@@ -1,325 +1,142 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="kb.css">
-<!--icon library-->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<meta charset="UTF-8">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" width="device-width, initial-scale=1.0">
+    <title>Knowledge Nexus</title>
+    <link rel="stylesheet" href="kb.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
+
 <body>
-    
-    <div class="nav-outer">
-        <div class="logo-outer">
-            <img class="main-slider-logo" src="images/logo-3.png"
-                 alt="logo img">
+    <div class="content-wrapper">
+        <div class="nav-outer">
+            <div class="logo-outer">
+                <img class="main-slider-logo" src="images/logo-3.png" alt="logo img">
+            </div>
+            <div class="nav-bar-context">
+                <ul class="nav">
+                    <li><span><a href="">Home</a></span></li>
+                    <li><span><a href="">Tech Services</a></span></li>
+                    <li><span><a href="">Ticket Submission</a></span></li>
+                    <li><span><a href="">Downloads</a></span></li>
+                    <li><span><a href="">FAQs</a></span></li>
+                    <li><span><a href="">Contact Us</a></span></li>
+                    <li><span><a href="">About Us</a></span></li>
+                </ul>
+                <button class="user-button"><i class="fa-solid fa-user"></i> user</button>
+            </div>
+            <div class="nav-bar-outer"></div>
         </div>
-        <div class="nav-bar-context">
-            <ul class="nav">
-                <li><span><a href="">Home</a></span></li>
-                <li><span><a href="">Tech Services</a></span></li>
-                <li><span><a href="">Ticket Submission</a></span></li>
-                <li><span><a href="">Downloads</a></span></li>
-                <li><span><a href="">FAQs</a></span></li>
-                <li><span><a href="">Contact Us</a></span></li>
-                <li><span><a href="">About Us</a></span></li>
-            </ul>
-            <button class="user-button"><i class="fa-solid fa-user"></i>  user</button>
-        </div>
-        <div class="nav-bar-outer"></div>
-    </div>
-   
+        
+        
+        <h3 class="title">Knowledge Nexus</h3>
 
-<br/><br/><br/> 
-   
-<div style="text-align:center">
-  <h1>Knowledge Nexus</h1>
-</div>
+        <div class="container">
+            <div class="card">
+                <div class="icon">
+                    <img src="images/image1.jpg">
+                </div>
+                <div class="content">
+                    <h3>Trouble Shooting Laptop Issues</h3>
 
-<!--Slide show-->
-<div class="slideshow-container">
+                    <p>Troubleshoot laptop issues by optimizing performance, addressing hardware malfunctions, and resolving software glitches such as system crashes and other errors. Utilize tools like Task Manager, update drivers, and perform regular maintenance tasks.
+                        If problems persist, seek professional assistance and ensure data backup.For laptop troubleshooting, tackle slowdowns, hardware glitches, and software issues with disk cleanup.</p>
+                    <br/>
+                    <button class="btn" onclick="window.location.href='articles/article1.pdf'" download><i class="fa fa-download"></i> Download PDF</button>
+                </div>
+                <br/>
 
-    <div class="mySlides fade">
-      <img src="image1.JPG" style="width:100%">
-    </div>
-    
-    <div class="mySlides fade">
-      <img src="image2.jpg" style="width:100%">
-    </div>
-    
-    <div class="mySlides fade">
-      <img src="image3.jpg" style="width:100%">
-    </div>
-    
-    </div>
-    <br>
-    
-    <div style="text-align:center">
-      <span class="dot"></span> 
-      <span class="dot"></span> 
-      <span class="dot"></span> 
-    </div>
+                <a class="more"></a>
+                <br/>
+            </div>
 
-<!-- three boxes-->
-<div class="row">
-  <div class="column" onclick="openTab('b1');">
-    Trouble Shooting Laptop Issues
-  </div>
-  <div class="column" onclick="openTab('b2');" >
-    Trouble Shooting Mobile Phone Issues
-  </div>
-  <div class="column" onclick="openTab('b3');">
-    Trouble Shooting Software Issues
-  </div>
-</div>
+            <div class="card">
+                <div class="icon">
+                    <img src="images/image3.jpg">
+                </div>
+                <div class="content">
+                    <h3>Troubleshooting Mobile Phone Issues</h3>
 
-<!-- Full-width columns: (hidden by default) -->
-<div id="b1" class="containerTab" style="display:none;">
-  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
-  <h1>Troubleshooting Laptop Issues: A Comprehensive Guide</h1>
+                    <p>Troubleshoot mobile phone issues by addressing connectivity issues like Wi-Fi and mobile data problems, software glitches such as app crashes and system performance issues,
+                        and hardware malfunctions including battery drain and screen issues. Perform basic troubleshooting steps like restarting the device, updating software, and checking settings. If problems persist, seek assistance from the manufacturer or carrier.</p>
+                    <br/>
+                    <button class="btn" onclick="window.location.href='articles/article2.pdf'" download><i class="fa fa-download"></i> Download PDF</button>
+                </div>
+                <br/>
 
-  <h3>Click the button to download the pdf:</h3>
-  <button class="btn" onclick="window.location.href='articles/article1.pdf'" download><i class="fa fa-download"></i> Download PDF</button>
-  <p>Welcome to our comprehensive guide on troubleshooting laptop issues. Whether you're experiencing performance slowdowns, hardware malfunctions, or software glitches, we've got you covered with step-by-step solutions to common problems. Let's dive in!</p>
+                <a class="more"></a>
+                <br/>
+            </div>
 
-  <h2>1. Performance Issues:</h2>
-  <h3>a. Slow Boot-up:</h3>
-  <ul>
-      <li>Check startup programs: Disable unnecessary programs from launching at startup.</li>
-      <li>Disk Cleanup: Remove temporary files and unused applications to free up disk space.</li>
-      <li>Defragmentation: Regularly defragment your hard drive for improved performance.</li>
-  </ul>
+            <div class="card">
+                <div class="icon">
+                    <img src="images/image2.jpg">
+                </div>
+                <div class="content">
+                    <h3>Trouble Shooting Software Issues</h3>
 
-  <h3>b. Sluggish Performance:</h3>
-  <ul>
-      <li>Task Manager: Identify resource-hungry processes and close them.</li>
-      <li>Update Drivers: Ensure all device drivers are up to date.</li>
-      <li>RAM Upgrade: Consider adding more RAM if your laptop frequently runs out of memory.</li>
-  </ul>
+                    <p>Troubleshoot software issues by updating apps/OS, clearing caches, reinstalling apps, running compatibility mode,
+                        checking for updates, using Task Manager, scanning for malware, and seeking professional help if needed.
+                        Resolve software issues with updates, cache clearance, reinstalls, compatibility adjustments, OS updates, and hardware upgrades. Combat security threats with antivirus scans, and data backup. </p>
+                    <br/>
+                    <button class="btn" onclick="window.location.href='articles/article3.pdf'" download><i class="fa fa-download"></i> Download PDF</button>
+                </div>
+                <br/>
 
-  <h2>2. Hardware Malfunctions:</h2>
-  <h3>a. Overheating:</h3>
-  <ul>
-      <li>Clean Air Vents: Remove dust and debris blocking the airflow.</li>
-      <li>Cooling Pad: Invest in a cooling pad to prevent overheating during intensive tasks.</li>
-      <li>Thermal Paste Replacement: Replace old thermal paste on the CPU for better heat dissipation.</li>
-  </ul>
-
-  <h3>b. Battery Drain:</h3>
-  <ul>
-      <li>Power Settings: Adjust power settings to optimize battery life.</li>
-      <li>Battery Calibration: Calibrate your battery periodically for accurate capacity readings.</li>
-      <li>Battery Replacement: If the battery doesn't hold charge, consider replacing it.</li>
-  </ul>
-
-  <h3>c. Screen Issues:</h3>
-  <ul>
-      <li>External Monitor: Connect to an external monitor to check if the issue is with the screen or the GPU.</li>
-      <li>Display Drivers: Update display drivers to fix resolution or color issues.</li>
-      <li>Screen Replacement: If the screen is physically damaged, consider replacing it.</li>
-  </ul>
-
-  <h2>3. Software Glitches:</h2>
-  <h3>a. System Crashes:</h3>
-  <ul>
-      <li>Windows Update: Install the latest Windows updates to patch security vulnerabilities and fix bugs.</li>
-      <li>System Restore: Roll back to a previous system restore point if recent changes caused instability.</li>
-      <li>Malware Scan: Perform a full system scan to detect and remove malware causing crashes.</li>
-  </ul>
-
-  <h3>b. Application Errors:</h3>
-  <ul>
-      <li>Reinstall Application: Uninstall and reinstall the problematic application to fix corrupted files.</li>
-      <li>Compatibility Mode: Run older applications in compatibility mode if they're not compatible with your current OS.</li>
-      <li>Error Logs: Check event logs for error details and troubleshooting clues.</li>
-  </ul>
-
-  <h3>c. Internet Connectivity:</h3>
-  <ul>
-      <li>Network Troubleshooter: Run the built-in network troubleshooter to diagnose and fix connection issues.</li>
-      <li>Router Reset: Power cycle your router and modem to refresh the connection.</li>
-      <li>DNS Flush: Flush DNS cache to resolve DNS-related problems.</li>
-  </ul>
-
-  <p>By following these troubleshooting steps, you can effectively diagnose and resolve common laptop issues. If you encounter persistent problems despite trying these solutions, consider seeking professional assistance. Remember to back up your data regularly to prevent data loss during troubleshooting processes.</p>
-</div>
-
-<div id="b2" class="containerTab" style="display:none;">
-  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
-  <h1>Troubleshooting Mobile Phone Issues: A Comprehensive Guide</h1>
-
-  <h3>Click the button to download the pdf:</h3>
-  <button class="btn" onclick="window.location.href='articles/article2.pdf'" download><i class="fa fa-download"></i> Download PDF</button>
-  <p>Welcome to our comprehensive guide on troubleshooting mobile phone issues. Whether you're facing connectivity problems, software glitches, or hardware malfunctions, we've got you covered with step-by-step solutions to common problems. Let's dive in!</p>
-
-  <h2>1. Connectivity Issues:</h2>
-  <h3>a. Wi-Fi Connection:</h3>
-  <ul>
-      <li>Restart Router: Power cycle your router and modem to refresh the connection.</li>
-      <li>Forget Network: Remove and re-add the Wi-Fi network on your phone.</li>
-      <li>Update Firmware: Check for firmware updates on your router.</li>
-  </ul>
-
-  <h3>b. Mobile Data:</h3>
-  <ul>
-      <li>Check Data Plan: Ensure you have an active data plan with sufficient data balance.</li>
-      <li>Toggle Data: Turn off and on mobile data to reset the connection.</li>
-      <li>APN Settings: Verify APN settings with your carrier.</li>
-  </ul>
-
-  <h2>2. Software Glitches:</h2>
-  <h3>a. App Crashes:</h3>
-  <ul>
-      <li>Update Apps: Install the latest updates for all installed applications.</li>
-      <li>Clear Cache: Clear app cache and data for problematic apps.</li>
-      <li>Reinstall App: Uninstall and reinstall the app to fix corrupted files.</li>
-  </ul>
-
-  <h3>b. System Performance:</h3>
-  <ul>
-      <li>Restart Device: Perform a soft reset by restarting your phone.</li>
-      <li>Factory Reset: Reset your phone to factory settings as a last resort.</li>
-      <li>Software Update: Install the latest OS updates for bug fixes and performance improvements.</li>
-  </ul>
-
-  <h2>3. Hardware Malfunctions:</h2>
-  <h3>a. Battery Drain:</h3>
-  <ul>
-      <li>Battery Health: Check battery health in device settings.</li>
-      <li>Background Apps: Close background apps consuming excessive battery.</li>
-      <li>Battery Replacement: If the battery drains quickly, consider replacing it.</li>
-  </ul>
-
-  <h3>b. Screen Issues:</h3>
-  <ul>
-      <li>Screen Calibration: Adjust screen brightness and color settings.</li>
-      <li>Screen Protector: Remove screen protectors obstructing touch sensitivity.</li>
-      <li>Screen Replacement: If the screen is cracked or damaged, consider replacing it.</li>
-  </ul>
-
-  <p>By following these troubleshooting steps, you can effectively diagnose and resolve common mobile phone issues. If you encounter persistent problems despite trying these solutions, consider contacting your phone manufacturer or carrier for assistance.</p>
-  
-</div>
-
-<div id="b3" class="containerTab" style="display:none;">
-  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
-  <h1>Troubleshooting Software Issues: A Comprehensive Guide</h1>
-
-  <h3>Click the button to download the pdf:</h3>
-  <button class="btn" onclick="window.location.href='articles/article3.pdf'" download><i class="fa fa-download"></i> Download PDF</button>
-    <p>Welcome to our comprehensive guide on troubleshooting software issues. Whether you're encountering crashes, errors, or performance problems with your applications or operating system, we've got you covered with step-by-step solutions to common problems. Let's dive in!</p>
-
-    <h2>1. Application Errors:</h2>
-    <h3>a. Application Crashes:</h3>
-    <ul>
-        <li>Update Application: Install the latest updates for the problematic application.</li>
-        <li>Clear Cache: Clear app cache and data to fix corrupted files.</li>
-        <li>Reinstall Application: Uninstall and reinstall the app to resolve software conflicts.</li>
-    </ul>
-
-    <h3>b. Compatibility Issues:</h3>
-    <ul>
-        <li>Compatibility Mode: Run the application in compatibility mode for older operating systems.</li>
-        <li>Update Operating System: Install the latest OS updates for improved compatibility.</li>
-        <li>Contact Developer: Reach out to the software developer for assistance with compatibility issues.</li>
-    </ul>
-
-    <h2>2. Operating System Errors:</h2>
-    <h3>a. System Crashes:</h3>
-    <ul>
-        <li>Check for Updates: Install the latest updates for your operating system.</li>
-        <li>System Restore: Roll back to a previous system restore point to undo recent changes.</li>
-        <li>Driver Updates: Update device drivers to fix compatibility issues.</li>
-    </ul>
-
-    <h3>b. Performance Issues:</h3>
-    <ul>
-        <li>Task Manager: Identify resource-intensive processes and close them.</li>
-        <li>Disk Cleanup: Remove temporary files and unused applications to free up disk space.</li>
-        <li>Upgrade Hardware: Consider upgrading RAM or storage for better performance.</li>
-    </ul>
-
-    <h2>3. Security Problems:</h2>
-    <h3>a. Malware Infections:</h3>
-    <ul>
-        <li>Antivirus Scan: Perform a full system scan to detect and remove malware.</li>
-        <li>Safe Mode: Boot into safe mode to troubleshoot malware infections.</li>
-        <li>Firewall Settings: Configure firewall settings to block suspicious connections.</li>
-    </ul>
-
-    <h3>b. Data Loss:</h3>
-    <ul>
-        <li>Backup Data: Regularly backup important files to prevent data loss.</li>
-        <li>Data Recovery Software: Use data recovery software to retrieve lost files.</li>
-        <li>Cloud Storage: Store files on cloud services for added data protection.</li>
-    </ul>
-
-    <p>By following these troubleshooting steps, you can effectively diagnose and resolve common software issues. If you encounter persistent problems despite trying these solutions, consider seeking assistance from IT professionals or software support forums.</p>
-  <p>Lorem ipsum dolor sit amet, te quo doctus abhorreant, et pri deleniti intellegat, te sanctus inermis ullamcorper nam. Ius error diceret deseruisse ad</p>
-</div>
-
-<footer>
-    <div class="footer-content">
-        <div class="footer-section">
-            <h2>Contact Us</h2>
-            <p>Email: support@example.com</p>
-            <p>Phone: +1 123 456 7890</p>
-        </div>
-        <div class="footer-section">
-            <h2>Quick Links</h2>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Tech Support</a></li>
-                <li><a href="#">Ticket Submission</a></li>
-                <li><a href="#">Downloads</a></li>
-                <li><a href="#">FAQs</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Contact Us</a></li>
-            </ul>
+                <a class="more"></a>
+                <br/>
+            </div>
         </div>
     </div>
-    <div class="footer-bottom">
-        <p>&copy; 2024 NexusTech Solutions</p>
-    </div>
-</footer>
 
-<script>
-//for column boxes
-function openTab(tabName) {
-  var i, x;
-  x = document.getElementsByClassName("containerTab");
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";
-  }
-  document.getElementById(tabName).style.display = "block";
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h2>Contact Us</h2>
+                <p>Email: support@example.com</p>
+                <p>Phone: +1 123 456 7890</p>
+            </div>
+            <div class="footer-section">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Tech Support</a></li>
+                    <li><a href="#">Ticket Submission</a></li>
+                    <li><a href="#">Downloads</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 NexusTech Solutions</p>
+        </div>
+    </footer>
 
-
-}
-//for slide show
-let slideIndex = 0;
-showSlides();
-
-function showSlides() {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
-  }
-  slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}    
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
-  setTimeout(showSlides, 2000); // Change image every 2 seconds
-}
-
-
-
-</script>
-
+    <script>
+        let more = document.querySelectorAll('.more');
+        let activeCard = null;
+    
+        for (let i = 0; i < more.length; i++) {
+            more[i].addEventListener('click', function () {
+                if (more[i].parentNode === activeCard) {
+                    more[i].parentNode.classList.remove('active');
+                    activeCard = null;
+                } else {
+                    if (activeCard !== null) {
+                        activeCard.classList.remove('active');
+                    }
+                    more[i].parentNode.classList.add('active');
+                    activeCard = more[i].parentNode;
+                }
+            })
+        }
+    </script>
+    
+    
 </body>
-</html> 
+
+</html>
