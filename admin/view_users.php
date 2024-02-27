@@ -7,11 +7,6 @@ require_once('../config.php'); ?>
 $username = $_SESSION['username'];
 $email = $_SESSION['email'];
 
-$username = $_SESSION['username'];
-$email = $_SESSION['email'];
-
-
-// Query to select all users
 $sql = "SELECT * FROM users";
 $result = $conn->query($sql);
 ?>
@@ -22,7 +17,6 @@ $result = $conn->query($sql);
     <title>Admin Page - NexusTech Solutions</title>
     <link rel="stylesheet" href="adminstyles.css">
     <style>
-        /* Add custom styles for scrollbar */
         .user-list-container {
             margin-top: 0px;
             height: 75%; 
@@ -50,9 +44,7 @@ $result = $conn->query($sql);
                         <th>Email</th>
                     </tr>
                     <?php
-                    // Check if there are users in the database
                     if ($result->num_rows > 0) {
-                        // Output data of each row
                         while ($row = $result->fetch_assoc()) {
                             echo "<tr>";
                             echo "<td>" . $row["username"] . "</td>";

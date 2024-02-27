@@ -7,10 +7,6 @@ require_once('../config.php'); ?>
 $username = $_SESSION['username'];
 $email = $_SESSION['email'];
 
-// Access username and email from session
-$username = $_SESSION['username'];
-$email = $_SESSION['email'];
-
 ?>
 
 <!DOCTYPE html>
@@ -41,9 +37,7 @@ $email = $_SESSION['email'];
             </form>
 
             <?php
-            // Check if the form is submitted
             if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['search_user'])) {
-                // Retrieve user details from the database based on the provided username
                 $username = $_POST['username'];
                 $sql = "SELECT * FROM users WHERE username='$username'";
                 $result = $conn->query($sql);
@@ -52,7 +46,6 @@ $email = $_SESSION['email'];
                 if ($result->num_rows > 0) {
                     $user = $result->fetch_assoc();
                     ?>
-                    <!-- Display user details -->
                     <h3>User Details:</h3>
                     <p><strong>Username:</strong> <?php echo $user['username']; ?></p>
                     <p><strong>Email:</strong> <?php echo $user['email']; ?></p>
