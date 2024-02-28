@@ -76,7 +76,7 @@
                     <td>+9411 256 8480</td>
                 </tr>
                 <tr>
-                    <td><a href="https://maps.app.goo.gl/KaLwfRhz48BZENSJ9"><img class="address" src="./images/location.png" alt="Location"></a>Address</td>
+                    <td><a href="https://maps.app.goo.gl/KaLwfRhz48BZENSJ9" target="_blank"><img class="address" src="./images/location.png" alt="Location"></a>Address</td>
                     <td>No.5, Church Lane, <br>Colombo 05 Sri Lanka</td>
                 </tr>
             </table>
