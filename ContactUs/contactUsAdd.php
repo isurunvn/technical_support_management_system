@@ -49,15 +49,13 @@
 
         <div class="contact-box">
             <div class="contact-left">
-                <h3>Sent your request</h3>
                 <form action= '' method='POST'>
                     <h1 align="center">Contact Us</h1>
                     <fieldset>
                     <legend><h4>Details:</h4></legend><br>
-		    ID : <input type="text" name="ID" placeholder="ID" required><br><br>
-                    Name : <input type="text" name="name" placeholder="Name" required><br><br>
-                    Email : <input type="email" name="email"placeholder="Email" required><br><br>
-                    Contact Number : <input type="text" name="contactNumber" placeholder="Contact Number" required><br><br>
+                    Name : <input type="text" name="name" placeholder="username" required><br><br>
+                    Email : <input type="email" name="email"placeholder="abc@gmail.com" required><br><br>
+                    Contact Number : <input type="text" name="contactNumber" placeholder="01123456789" required><br><br>
                     Comments : <br><textarea name="comments" rows="5" cols="20" placeholder="Please add your comments" required></textarea><br>
                     </fieldset><br>
                     <button type="submit" name="submit"><b>Submit</b></button>
@@ -76,7 +74,7 @@
                     <td>+9411 256 8480</td>
                 </tr>
                 <tr>
-                    <td><a href="https://maps.app.goo.gl/KaLwfRhz48BZENSJ9"><img class="address" src="./images/location.png" alt="Location"></a>Address</td>
+                    <td><a href="https://maps.app.goo.gl/KaLwfRhz48BZENSJ9" target="_blank"><img class="address" src="./images/location.png" alt="Location"></a>Address</td>
                     <td>No.5, Church Lane, <br>Colombo 05 Sri Lanka</td>
                 </tr>
             </table>
