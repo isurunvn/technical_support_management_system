@@ -51,11 +51,11 @@ $email = $_SESSION['email'];
                 <ul class="nav">
                     <li><span><a href="home.html">Home</a></span></li>
                     <li><span><a href="">Tech Services</a></span></li>
-                    <li><span><a href="">Ticket Submission</a></span></li>
+                    <li><span><a href="aboutUs/Issu_Submission_Form.php">Ticket Submission</a></span></li>
                     <li><span><a href="">Downloads</a></span></li>
                     <li><span><a href="">FAQs</a></span></li>
                     <li><span><a href="">Contact Us</a></span></li>
-                    <li><span><a href="">About Us</a></span></li>
+                    <li><span><a href="aboutUs/About Us.html">About Us</a></span></li>
                 </ul>
                 <div class="user-dropdown">
                     <button class="user-button"><i class="fa-solid fa-user"><p><?php echo $username; ?></p></i></button>

@@ -28,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $problem = $_POST['problem'];
 
         // Insert new user into the database
-        $sql = "INSERT INTO issues (first_name, last_name, email, phone, category, problem ) VALUES ('$first_name', '$last_name', '$email', '$phone', '$category', '$problem')";
+        $sql = "INSERT INTO issues (first_name, last_name, email, phone, category, problem, username ) VALUES ('$first_name', '$last_name', '$email', '$phone', '$category', '$problem', '$username')";
         
         if ($conn->query($sql) === TRUE) {
             echo "<script>alert('Issue added successfully');</script>";
@@ -62,13 +62,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </div>
         <div class="nav-bar-context">
             <ul class="nav">
-                <li><span><a href="home.html">Home</a></span></li>
+                <li><span><a href="../home.php">Home</a></span></li>
                 <li><span><a href="">Tech Services</a></span></li>
-                <li><span><a href="">Ticket Submission</a></span></li>
+                <li><span><a href="Issu_Submission_Form.php">Ticket Submission</a></span></li>
                 <li><span><a href="">Downloads</a></span></li>
                 <li><span><a href="">FAQs</a></span></li>
                 <li><span><a href="">Contact Us</a></span></li>
-                <li><span><a href="">About Us</a></span></li>
+                <li><span><a href="About Us.html">About Us</a></span></li>
             </ul>
             <div class="user-dropdown">
                 <button class="user-button"><i class="fa-solid fa-user"><p><?php echo $username; ?></p></i></button>
@@ -85,7 +85,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <h1> Service Request Form </h1>
     
     <div class="details">
-    <form>
+    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
 
         <div class="first_name">
         <label for="first_name">First Name:</label><br>
@@ -126,10 +126,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
        </div>
         
        <div class="submit_button">
-       <form action="/submit" method="post">
-       <input type="submit" name="submit" value="Submit">
+            <input type="submit" name="submit" value="Submit">
        </div>
-</form>
+    </form>
        </div>
 
       </div>
