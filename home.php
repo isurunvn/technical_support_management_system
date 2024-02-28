@@ -54,7 +54,7 @@ $email = $_SESSION['email'];
                     <li><span><a href="aboutUs/Issu_Submission_Form.php">Ticket Submission</a></span></li>
                     <li><span><a href="">Downloads</a></span></li>
                     <li><span><a href="">FAQs</a></span></li>
-                    <li><span><a href="">Contact Us</a></span></li>
+                    <li><span><a href="ContactUs/contactUsAdd.php">Contact Us</a></span></li>
                     <li><span><a href="aboutUs/About Us.html">About Us</a></span></li>
                 </ul>
                 <div class="user-dropdown">
