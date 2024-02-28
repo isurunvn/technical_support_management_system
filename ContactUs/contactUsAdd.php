@@ -53,9 +53,9 @@
                     <h1 align="center">Contact Us</h1>
                     <fieldset>
                     <legend><h4>Details:</h4></legend><br>
-                    Name : <input type="text" name="name" placeholder="Name" required><br><br>
-                    Email : <input type="email" name="email"placeholder="Email" required><br><br>
-                    Contact Number : <input type="text" name="contactNumber" placeholder="Contact Number" required><br><br>
+                    Name : <input type="text" name="name" placeholder="username" required><br><br>
+                    Email : <input type="email" name="email"placeholder="abc@gmail.com" required><br><br>
+                    Contact Number : <input type="text" name="contactNumber" placeholder="01123456789" required><br><br>
                     Comments : <br><textarea name="comments" rows="5" cols="20" placeholder="Please add your comments" required></textarea><br>
                     </fieldset><br>
                     <button type="submit" name="submit"><b>Submit</b></button>
