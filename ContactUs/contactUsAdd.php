@@ -49,12 +49,10 @@
 
         <div class="contact-box">
             <div class="contact-left">
-                <h3>Sent your request</h3>
                 <form action= '' method='POST'>
                     <h1 align="center">Contact Us</h1>
                     <fieldset>
                     <legend><h4>Details:</h4></legend><br>
-		    ID : <input type="text" name="ID" placeholder="ID" required><br><br>
                     Name : <input type="text" name="name" placeholder="Name" required><br><br>
                     Email : <input type="email" name="email"placeholder="Email" required><br><br>
                     Contact Number : <input type="text" name="contactNumber" placeholder="Contact Number" required><br><br>
