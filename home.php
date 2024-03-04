@@ -49,11 +49,10 @@ $email = $_SESSION['email'];
             </div>
             <div class="nav-bar-context">
                 <ul class="nav">
-                    <li><span><a href="home.html">Home</a></span></li>
+                    <li><span><a href="home.php">Home</a></span></li>
                     <li><span><a href="">Tech Services</a></span></li>
-                    <li><span><a href="aboutUs/Issu_Submission_Form.php">Ticket Submission</a></span></li>
-                    <li><span><a href="">Downloads</a></span></li>
-                    <li><span><a href="">FAQs</a></span></li>
+                    <li><span><a href="aboutUs/Issu_Submission_Form.php">Issue Submission</a></span></li>
+                    <li><span><a href="faq/faq.html">FAQs</a></span></li>
                     <li><span><a href="ContactUs/contactUsAdd.php">Contact Us</a></span></li>
                     <li><span><a href="aboutUs/About Us.html">About Us</a></span></li>
                 </ul>
