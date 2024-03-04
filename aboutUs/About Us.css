@@ -4,6 +4,21 @@
     font-family: 'Ubuntu', sans-serif;
 }
 
+
+/*added new style by Tharusha*/
+.bg{
+    width: 100vw;
+    height: 100vh;
+    background-image: url("https://svmsolutions.b-cdn.net/wp-content/uploads/2020/01/converting-about-us-page.jpg");
+    background-size: cover;
+    background-position: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    filter: blur(8px);
+    z-index: -1;
+} 
+
 .About_us{
     color: #6a1191;
     font-family: 'Ubuntu', sans-serif;
@@ -27,18 +42,19 @@
     border: solid;
     border-color:#6a1191;
     width: 350px;
-    height: 520px;`
+    height: 520px;
     vertical-align: top;
     border-radius: 10px;
     margin-top: 50px;
     align-items: center;
     justify-content: center;
     align-items: center;
+    box-shadow: 0 0 10px rgb(0, 0, 0);
     
 }
 
 .Who_are_we:hover{
-    background-color:rgb(236, 232, 232);
+    background-color:rgba(255, 255, 255, 0.8);
     border-color: #6a1191;
     border-width: 0.1cm;
     color: #6a1191;
@@ -53,13 +69,14 @@
     border: solid;
     border-color:#6a1191;
     width: 350px;
-    height: 520px;`
+    height: 520px;
     vertical-align: top;
     border-radius: 10px;
     margin-top: 50px;
     align-items: center;
     justify-content: center;
     align-items: center;
+    box-shadow: 0 0 10px rgb(0, 0, 0);
 }
 
 .img{
@@ -79,7 +96,7 @@
 }
 
 .Our_Mission:hover{     
-    background-color:rgb(236, 232, 232);
+    background-color:rgba(255, 255, 255, 0.8);
     border-color: #6a1191;
     border-width: 0.1cm;
     color: #6a1191;
@@ -101,10 +118,11 @@
     align-items: center;
     justify-content: center;
     align-items: center;
+    box-shadow: 0 0 10px rgb(0, 0, 0);
 }
 
 .Get_in_Touch:hover{
-    background-color:rgb(236, 232, 232);
+    background-color:rgba(255, 255, 255, 0.8);
     border-color: #6a1191;
     border-width: 0.1cm;
     color: #6a1191;
@@ -126,11 +144,11 @@
     justify-content: center;
     align-items: center;
     margin: 50px 63px 0 63px;
-    
+    box-shadow: 0 0 10px rgb(0, 0, 0);
 }
 
 .Our_Team:hover{
-    background-color:rgb(236, 232, 232);
+    background-color:rgba(255, 255, 255, 0.8);
     border-color: #6a1191;
     border-width: 0.1cm;
     color: #6a1191;
@@ -157,12 +175,13 @@
     width: 200px;
     height:200px;
     display: flex;
+    box-shadow: 0 0 10px rgb(0, 0, 0);
 }
 
 
 .name{
     width: 200px;
-    color: #8e44ad;
+    color: black;
 }
 
 
