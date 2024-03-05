@@ -1,10 +1,18 @@
 <?php require_once('connect.php'); ?>
 
+<?php
+session_start(); 
+
+$username = $_SESSION['username'];
+$email = $_SESSION['email'];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="stylesheetContactUs.css">
+    <script src="https://kit.fontawesome.com/a65b5ae8d1.js" crossorigin="anonymous"></script>
     <title>Contact Us</title>
     <style>
         img.bg{
@@ -35,8 +43,12 @@
                 <li><span><a href="../contactUs/contactUsAdd.php">Contact Us</a></span></li>
                 <li><span><a href="../aboutUs/About Us.php">About Us</a></span></li>
             </ul>
-            <button class="user-button"><i class="fa-solid fa-user"></i>  user</button>
-        </div>
+            <div class="user-dropdown">
+                    <button class="user-button"><i class="fa-solid fa-user"><p><?php echo $username; ?></p></i></button>
+                    <div class="dropdown-content">
+                        <a href="Entry/entry.html">Logout</a>
+                    </div>
+                </div>           </div>
         <div class="nav-bar-outer"></div>
     </div>
 
@@ -124,7 +136,7 @@
 <?php
 	if(isset($_POST['submit'])){
 
-	$sql = "INSERT INTO contact_us (name,email,contactNumber,comments) VALUES ('".$_POST['name']."','".$_POST['email']."','".$_POST['contactNumber']."','".$_POST['comments']."')";
+	$sql = "INSERT INTO contact (name,email,contactNumber,comments) VALUES ('".$_POST['name']."','".$_POST['email']."','".$_POST['contactNumber']."','".$_POST['comments']."')";
 
 	$result = mysqli_query($connection,$sql);
 	if($result)
