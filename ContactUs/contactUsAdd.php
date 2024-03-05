@@ -13,13 +13,6 @@ $username = $_SESSION['username'];
 $email = $_SESSION['email'];
 ?>
 
-<?php
-session_start(); 
-
-$username = $_SESSION['username'];
-$email = $_SESSION['email'];
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -44,8 +37,8 @@ $email = $_SESSION['email'];
                     <li><span><a href="../kb/kb.php">Tech Services</a></span></li>
                     <li><span><a href="../aboutUs/Issu_Submission_Form.php">Ticket Submission</a></span></li>
                     <li><span><a href="../faq/faq.php">FAQs</a></span></li>
-                    <li><span><a href="../ContactUs/contactUsAdd.php">Contact Us</a></span></li>
-                    <li><span><a href="../aboutUs/About Us.html">About Us</a></span></li>
+                    <li><span><a href="contactUsAdd.php">Contact Us</a></span></li>
+                    <li><span><a href="../aboutUs/About Us.php">About Us</a></span></li>
                 </ul>
                 <div class="user-dropdown">
                         <button class="user-button"><i class="fa-solid fa-user"><p><?php echo $username; ?></p></i></button>
@@ -122,12 +115,12 @@ $email = $_SESSION['email'];
                 <div class="footer-section">
                     <h2>Quick Links</h2>
                     <ul>
-                            <li><a href="../home.php">Home</a></li>
-                            <li><a href="../kb/kb.php">Tech Support</a></li>
-                            <li><a href="../aboutUs/Issu_Submission_Form.php">Ticket Submission</a></li>
-                            <li><a href="../faq/faq.php">FAQs</a></li>
-                            <li><a href="../aboutUs/About Us.html">About Us</a></li>
-                            <li><a href="../ContactUs/contactUsAdd.php">Contact Us</a></li>
+                        <li><span><a href="../home.php">Home</a></span></li>
+                        <li><span><a href="../kb/kb.php">Tech Services</a></span></li>
+                        <li><span><a href="../aboutUs/Issu_Submission_Form.php">Ticket Submission</a></span></li>
+                        <li><span><a href="../faq/faq.php">FAQs</a></span></li>
+                        <li><span><a href="contactUsAdd.php">Contact Us</a></span></li>
+                        <li><span><a href="../aboutUs/About Us.php">About Us</a></span></li>
                     </ul>
                 </div>
             </div>
@@ -141,14 +134,14 @@ $email = $_SESSION['email'];
 <?php
 	if(isset($_POST['submit'])){
 
-	$sql = "INSERT INTO contact (name,email,contactNumber,comments) VALUES ('".$_POST['name']."','".$_POST['email']."','".$_POST['contactNumber']."','".$_POST['comments']."')";
-
-	$result = mysqli_query($connection,$sql);
-	if($result)
-echo"<script> alert('Submitted Sucessfully') </script>";
-else
-echo"failed";
-
-}
+        $sql = "INSERT INTO contact (name,email,contactNumber,comments) VALUES ('".$_POST['name']."','".$_POST['email']."','".$_POST['contactNumber']."','".$_POST['comments']."')";
+    
+        $result = mysqli_query($connection,$sql);
+        if($result)
+            echo"<script> alert('Submitted Sucessfully'); </script>";
+            else
+            echo"failed";
+    
+    }
 
 ?>

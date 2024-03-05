@@ -4,7 +4,7 @@ session_start();
 
 $username = $_SESSION['username'];
 $email = $_SESSION['email'];
-
+ 
 $servername = "localhost"; 
 $username_db = "root"; 
 $password_db = ""; 
@@ -17,17 +17,15 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-// Handle add user form submission
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (isset($_POST['submit'])) {
         $first_name = $_POST['first_name'];
         $last_name = $_POST['last_name'];
         $email = $_POST['email'];
-        $phone = $_POST['phone']; // Make sure to hash the password securely before storing it in the database
+        $phone = $_POST['phone'];
         $category = $_POST['category'];
         $problem = $_POST['problem'];
 
-        // Insert new user into the database
         $sql = "INSERT INTO issues (first_name, last_name, email, phone, category, problem, username ) VALUES ('$first_name', '$last_name', '$email', '$phone', '$category', '$problem', '$username')";
         
         if ($conn->query($sql) === TRUE) {
@@ -60,16 +58,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </div>
             <div class="nav-outer">
                 <div class="logo-outer">
-                    <a href="home.html"><img class="main-slider-logo" src="images/logo-3.png" alt="logo img"></a>
+                    <a href="home.php"><img class="main-slider-logo" src="images/logo-3.png" alt="logo img"></a>
                 </div>
                 <div class="nav-bar-context">
                     <ul class="nav">
                         <li><span><a href="../home.php">Home</a></span></li>
                         <li><span><a href="../kb/kb.php">Tech Services</a></span></li>
-                        <li><span><a href="../aboutUs/Issu_Submission_Form.php">Issue Submission</a></span></li>
+                        <li><span><a href="Issu_Submission_Form.php">Issue Submission</a></span></li>
                         <li><span><a href="../faq/faq.php">FAQs</a></span></li>
                         <li><span><a href="../ContactUs/contactUsAdd.php">Contact Us</a></span></li>
-                        <li><span><a href="../aboutUs/About Us.html">About Us</a></span></li>
+                        <li><span><a href="About Us.php">About Us</a></span></li>
                     </ul>
                     <div class="user-dropdown">
                         <button class="user-button"><i class="fa-solid fa-user"><p><?php echo $username; ?></p></i></button>
@@ -144,12 +142,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <div class="footer-section">
                         <h2>Quick Links</h2>
                         <ul>
-                            <li><a href="../home.php">Home</a></li>
-                            <li><a href="../kb/kb.php">Tech Support</a></li>
-                            <li><a href="../aboutUs/Issu_Submission_Form.php">Ticket Submission</a></li>
-                            <li><a href="../faq/faq.php">FAQs</a></li>
-                            <li><a href="../aboutUs/About Us.html">About Us</a></li>
-                            <li><a href="../ContactUs/contactUsAdd.php">Contact Us</a></li>
+                        <li><span><a href="../home.php">Home</a></span></li>
+                        <li><span><a href="../kb/kb.php">Tech Services</a></span></li>
+                        <li><span><a href="Issu_Submission_Form.php">Issue Submission</a></span></li>
+                        <li><span><a href="../faq/faq.php">FAQs</a></span></li>
+                        <li><span><a href="../ContactUs/contactUsAdd.php">Contact Us</a></span></li>
+                        <li><span><a href="About Us.php">About Us</a></span></li>
                         </ul>
                     </div>
                 </div>

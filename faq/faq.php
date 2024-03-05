@@ -1,46 +1,22 @@
 <?php
-<<<<<<< HEAD
-<<<<<<<< HEAD:faq/faq.php
 session_start(); 
 
-========
-=======
->>>>>>> v-2
-session_start(); // Start the session
-
-// Check if user is logged in
 if (!isset($_SESSION['username'])) {
-    // Redirect to login page if not logged in
     header("Location: ../login.php");
     exit;
 }
 
-// Access username and email from session
-<<<<<<< HEAD
->>>>>>>> v-2:faq/faq.html
-=======
->>>>>>> v-2
 $username = $_SESSION['username'];
 $email = $_SESSION['email'];
 ?>
 
-<<<<<<< HEAD
-<<<<<<<< HEAD:faq/faq.php
-<!DOCTYPE html>
-========
->>>>>>>> v-2:faq/faq.html
-=======
->>>>>>> v-2
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>FAQs</title>
-<<<<<<< HEAD
-=======
     
->>>>>>> v-2
     <script src="https://kit.fontawesome.com/a65b5ae8d1.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
@@ -61,33 +37,17 @@ $email = $_SESSION['email'];
                     <li><span><a href="../home.php">Home</a></span></li>
                     <li><span><a href="../kb/kb.php">Tech Services</a></span></li>
                     <li><span><a href="../aboutUs/Issu_Submission_Form.php">Issue Submission</a></span></li>
-                    <li><span><a href="../faq/faq.php">FAQs</a></span></li>
+                    <li><span><a href="faq.php">FAQs</a></span></li>
                     <li><span><a href="../ContactUs/contactUsAdd.php">Contact Us</a></span></li>
-<<<<<<< HEAD
                     <li><span><a href="../aboutUs/About Us.php">About Us</a></span></li>
-=======
-                    <li><span><a href="../aboutUs/About Us.html">About Us</a></span></li>
->>>>>>> v-2
                 </ul>
                 <div class="user-dropdown">
                     <button class="user-button"><i class="fa-solid fa-user"><p><?php echo $username; ?></p></i></button>
                     <div class="dropdown-content">
-<<<<<<< HEAD
-<<<<<<<< HEAD:faq/faq.php
-                        <a href="Entry/entry.html">Logout</a>
-                    </div>
-                </div>                 
-========
-=======
->>>>>>> v-2
                         <a href="../Entry/entry.html">Logout</a>
                     </div>
                 </div> 
             </div>
-<<<<<<< HEAD
->>>>>>>> v-2:faq/faq.html
-=======
->>>>>>> v-2
             <div class="nav-bar-outer"></div>
         </div>
 
@@ -162,22 +122,12 @@ $email = $_SESSION['email'];
             <div class="footer-section">
                 <h2>Quick Links</h2>
                 <ul>
-<<<<<<< HEAD
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Tech Support</a></li>
-                    <li><a href="#">Ticket Submission</a></li>
-                    <li><a href="#">Downloads</a></li>
-                    <li><a href="#">FAQs</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Contact Us</a></li>
-=======
-                            <li><a href="../home.php">Home</a></li>
-                            <li><a href="../kb/kb.php">Tech Support</a></li>
-                            <li><a href="../aboutUs/Issu_Submission_Form.php">Ticket Submission</a></li>
-                            <li><a href="../faq/faq.php">FAQs</a></li>
-                            <li><a href="../aboutUs/About Us.html">About Us</a></li>
-                            <li><a href="../ContactUs/contactUsAdd.php">Contact Us</a></li>
->>>>>>> v-2
+                    <li><span><a href="../home.php">Home</a></span></li>
+                    <li><span><a href="../kb/kb.php">Tech Services</a></span></li>
+                    <li><span><a href="../aboutUs/Issu_Submission_Form.php">Issue Submission</a></span></li>
+                    <li><span><a href="faq.php">FAQs</a></span></li>
+                    <li><span><a href="../ContactUs/contactUsAdd.php">Contact Us</a></span></li>
+                    <li><span><a href="../aboutUs/About Us.php">About Us</a></span></li>
                 </ul>
             </div>
         </div>

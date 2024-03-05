@@ -45,7 +45,7 @@ $email = $_SESSION['email'];
     <div class="main-slider-outer" >
         <div class="nav-outer">
             <div class="logo-outer">
-                <a href="home.html"><img class="main-slider-logo" src="images/logo-3.png" alt="logo img"></a>
+                <a href="home.php"><img class="main-slider-logo" src="images/logo-3.png" alt="logo img"></a>
             </div>
             <div class="nav-bar-context">
                 <ul class="nav">
@@ -247,13 +247,12 @@ $email = $_SESSION['email'];
             <div class="footer-section">
                 <h2>Quick Links</h2>
                 <ul>
-                    <li><a href="home.html">Home</a></li>
-                    <li><a href="#">Tech Support</a></li>
-                    <li><a href="#">Ticket Submission</a></li>
-                    <li><a href="#">Downloads</a></li>
-                    <li><a href="#">FAQs</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Contact Us</a></li>
+                    <li><span><a href="home.php">Home</a></span></li>
+                    <li><span><a href="kb/kb.php">Tech Services</a></span></li>
+                    <li><span><a href="aboutUs/Issu_Submission_Form.php">Issue Submission</a></span></li>
+                    <li><span><a href="faq/faq.php">FAQs</a></span></li>
+                    <li><span><a href="ContactUs/contactUsAdd.php">Contact Us</a></span></li>
+                    <li><span><a href="aboutUs/About Us.php">About Us</a></span></li>
                 </ul>
             </div>
         </div>
