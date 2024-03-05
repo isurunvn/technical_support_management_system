@@ -1,6 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script&family=Ubuntu:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script&family=Ubuntu:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script&family=Roboto&family=Ubuntu:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Oleo+Script&family=Roboto&family=Ubuntu:wght@500&display=swap');
 *{
     margin: 0;
     padding: 0;
+    font-family: 'Ubuntu', sans-serif;
     box-sizing: border-box;
 }
 
@@ -14,7 +20,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    filter: blur(10px);
+    filter: blur(7px);
     z-index: -1;
 } 
 
