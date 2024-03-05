@@ -1,7 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script&family=Ubuntu:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script&family=Ubuntu:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script&family=Roboto&family=Ubuntu:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Oleo+Script&family=Roboto&family=Ubuntu:wght@500&display=swap');
+
 *{
     margin: 0px;
     padding: 0px;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Ubuntu', 'sans-serif';
 }
 
 body{
@@ -10,10 +16,11 @@ body{
 
 /*Header*/
 .nav-outer{
-    width: 100%;
+    width: 100vw;
     height: 70px;
     background-color: rgba(142, 68, 173, 0.8);
     display: flex;
+    position: fixed;
     top: 0;
     z-index: 2;
 }
@@ -66,6 +73,9 @@ body{
     border-color: white;
 }
 
+.user-dropdown {
+    position: relative;
+}
 .nav>li>span>a:hover{
     color: #f5cd79;
 }
@@ -85,8 +95,53 @@ body{
     color: white;
     transform: scale(1.1);
 }
+.user-button > p{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 100;
+    font-family: 'Segoe UI', 'cursive';
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(142, 68, 173, 0.8);
+    border-radius: 10px;
+    min-width: 120px;
+    z-index: 1;
+    top: 100%;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f39c12;
+    border-radius: 10px;
+}
+
+.user-dropdown:hover .dropdown-content {
+    display: block;
+}
 
 /*Content css*/
+.bg{
+    width: 100vw;
+    height: 100vh;
+    background-image: url("https://img.freepik.com/premium-photo/contact-us-concept-business-woman-hand-pointing-icon-email-customer-service-call-center_2034-1944.jpg");
+    background-size: cover;
+    background-position: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    filter: blur(4px);
+    z-index: -1;
+} 
 .container{
     width: 80%;
     margin: 20px auto;
@@ -116,12 +171,14 @@ body{
     background: #932DED;
     color: #000;
 }
-
-h1{
+.heading{
+    padding: 100px 0px 0px 0px;
+}
+.heading h1{
     margin-bottom: 2px;
 }
 
-.container p{
+.heading p{
     margin-bottom: 40px;
 }
 
@@ -222,7 +279,7 @@ footer {
     color: #576574;
     padding: 20px 0;
     width: 100%;
-    margin: 15px 0 auto;
+    margin-top: 100px;
 }
 
 .footer-content {
