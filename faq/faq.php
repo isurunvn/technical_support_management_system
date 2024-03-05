@@ -20,6 +20,7 @@ $email = $_SESSION['email'];
 
     <title>FAQs</title>
     
+    <script src="https://kit.fontawesome.com/a65b5ae8d1.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="faq.css">
@@ -41,7 +42,7 @@ $email = $_SESSION['email'];
                     <li><span><a href="../aboutUs/Issu_Submission_Form.php">Issue Submission</a></span></li>
                     <li><span><a href="../faq/faq.php">FAQs</a></span></li>
                     <li><span><a href="../ContactUs/contactUsAdd.php">Contact Us</a></span></li>
-                    <li><span><a href="../aboutUs/About Us.php">About Us</a></span></li>
+                    <li><span><a href="../aboutUs/About Us.html">About Us</a></span></li>
                 </ul>
                 <div class="user-dropdown">
                     <button class="user-button"><i class="fa-solid fa-user"><p><?php echo $username; ?></p></i></button>
@@ -124,13 +125,12 @@ $email = $_SESSION['email'];
             <div class="footer-section">
                 <h2>Quick Links</h2>
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Tech Support</a></li>
-                    <li><a href="#">Ticket Submission</a></li>
-                    <li><a href="#">Downloads</a></li>
-                    <li><a href="#">FAQs</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Contact Us</a></li>
+                            <li><a href="../home.php">Home</a></li>
+                            <li><a href="../kb/kb.php">Tech Support</a></li>
+                            <li><a href="../aboutUs/Issu_Submission_Form.php">Ticket Submission</a></li>
+                            <li><a href="../faq/faq.php">FAQs</a></li>
+                            <li><a href="../aboutUs/About Us.html">About Us</a></li>
+                            <li><a href="../ContactUs/contactUsAdd.php">Contact Us</a></li>
                 </ul>
             </div>
         </div>

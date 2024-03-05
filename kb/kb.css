@@ -1,7 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script&family=Ubuntu:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script&family=Ubuntu:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script&family=Roboto&family=Ubuntu:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Oleo+Script&family=Roboto&family=Ubuntu:wght@500&display=swap');
+
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+
     font-family: 'Ubuntu', sans-serif;
 }
 
@@ -19,7 +25,7 @@ body {
 }
 
 .nav-outer {
-    width: 100%;
+    width: 100vw;
     height: 70px;
     background-color: rgba(142, 68, 173, 0.8);
     display: flex;
@@ -79,6 +85,59 @@ body {
     color: #f5cd79;
 }
 
+.user-dropdown {
+    position: relative;
+}
+
+.user-button {
+    padding: 6px 12px;
+    margin: 0 25px;
+    background: none;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.user-button:hover {
+    background-color: #f39c12;
+    color: white;
+    transform: scale(1.1);
+}
+
+.user-button > p{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 100;
+    font-family: 'Segoe UI', 'cursive';
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(142, 68, 173, 0.8);
+    border-radius: 10px;
+    min-width: 120px;
+    z-index: 1;
+    top: 100%;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f39c12;
+    border-radius: 10px;
+}
+
+.user-dropdown:hover .dropdown-content {
+    display: block;
+}
 .title{
     font-size: 30px;
     text-align: center;
@@ -87,6 +146,19 @@ body {
     text-decoration: none;
     font-family: 'Ubuntu', sans-serif;
 }
+
+.bg{
+    width: 100vw;
+    height: 100vh;
+    background-image: url("https://amoeboids.com/wp-content/uploads/2020/03/8-Knowledge-Base-Examples-to-Inspire-You.webp");
+    background-size: cover;
+    background-position: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    filter: blur(7px);
+    z-index: -1;
+} 
 
 .container {
     flex: 1;
@@ -103,7 +175,7 @@ body {
     width: 350px;
     padding: 20px;
     margin: 30px;
-    background-color: #424242;
+    background-color: rgba(142, 68, 173, 0.8);
     border-radius: 25px;
     margin-bottom: 10px;
     transition: max-height 0.5s ease-in-out;
@@ -158,7 +230,7 @@ body {
     height: 100px;
     left: 0;
     bottom: 0;
-    background: linear-gradient(transparent, #3f3f3f);
+    background: linear-gradient(transparent, rgba(142, 68, 173));
 }
 
 .card.active .content::before {
@@ -166,14 +238,14 @@ body {
 }
 
 .content h3 {
-    color: rgba(234, 185, 255, 0.8);
+    color: rgba(0, 0, 0, 0.8);
     font-size: 1.4em;
     font-weight: 600;
     margin-bottom: 10px;
 }
 
 .content p {
-    color: #ccc;
+    color: #ffffffe8;
     font-weight: 300;
 }
 

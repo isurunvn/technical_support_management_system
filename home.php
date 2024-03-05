@@ -50,9 +50,9 @@ $email = $_SESSION['email'];
             <div class="nav-bar-context">
                 <ul class="nav">
                     <li><span><a href="home.php">Home</a></span></li>
-                    <li><span><a href="kb/kb.html">Tech Services</a></span></li>
+                    <li><span><a href="kb/kb.php">Tech Services</a></span></li>
                     <li><span><a href="aboutUs/Issu_Submission_Form.php">Issue Submission</a></span></li>
-                    <li><span><a href="faq/faq.html">FAQs</a></span></li>
+                    <li><span><a href="faq/faq.php">FAQs</a></span></li>
                     <li><span><a href="ContactUs/contactUsAdd.php">Contact Us</a></span></li>
                     <li><span><a href="aboutUs/About Us.html">About Us</a></span></li>
                 </ul>
@@ -120,8 +120,7 @@ $email = $_SESSION['email'];
                     <h2>Technical Advices</h2>
                 </div>
                 <div class="hidden-wrapper">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum magnam nostrum odit rerum suscipit?
-                        Consectetur explicabo, incidunt inventore iure nesciunt odit qui repellat tempora voluptatibus?</p>
+                    <p>"Access expert technical advice and troubleshooting tips on our support management system website. Our platform offers comprehensive guidance to resolve technical issues efficiently, ensuring seamless operation of your systems and devices. From software glitches to hardware malfunctions, find the solutions you need to keep your technology running smoothly."</p>
                 </div>
             </div>
         </div>
@@ -129,11 +128,10 @@ $email = $_SESSION['email'];
             <div class="shadow-wrapper">
                 <div class="show-wrapper">
                     <p><i class="fa-solid fa-mobile"></i></p>
-                    <h2>Technical Accesseries</h2>
+                    <h2>Technical Accessories</h2>
                 </div>
                 <div class="hidden-wrapper">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum magnam nostrum odit rerum suscipit?
-                        Consectetur explicabo, incidunt inventore iure nesciunt odit qui repellat tempora voluptatibus?</p>
+                    <p>"Explore a wide range of essential technical accessories on our support management system website. From cables and adapters to peripherals and tools, we provide the accessories you need to optimize your technology setup. Enhance performance, connectivity, and productivity with our carefully curated selection of top-quality accessories designed to complement your devices seamlessly."</p>
                 </div>
             </div>
         </div>
@@ -144,8 +142,7 @@ $email = $_SESSION['email'];
                     <h2>Laptop Performance Boosting</h2>
                 </div>
                 <div class="hidden-wrapper">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum magnam nostrum odit rerum suscipit?
-                        Consectetur explicabo, incidunt inventore iure nesciunt odit qui repellat tempora voluptatibus?</p>
+                    <p>"Unlock the full potential of your laptop with our performance-boosting solutions on our technical support management system website. Discover expert tips, software optimizations, and hardware upgrades to enhance speed, efficiency, and overall performance. From optimizing startup processes to upgrading RAM and storage, we provide the tools and guidance to maximize your laptop's capabilities and productivity."</p>
                 </div>
             </div>
         </div>
@@ -156,8 +153,7 @@ $email = $_SESSION['email'];
                     <h2>Tech Expert Help</h2>
                 </div>
                 <div class="hidden-wrapper">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum magnam nostrum odit rerum suscipit?
-                        Consectetur explicabo, incidunt inventore iure nesciunt odit qui repellat tempora voluptatibus?</p>
+                    <p>"Get personalized tech support from industry experts on our management system website. Our team of experienced professionals is ready to assist you with troubleshooting, software installations, hardware setups, and more. Access reliable guidance and solutions tailored to your specific needs, ensuring smooth operation and optimal performance of your technology."</p>
                 </div>
             </div>
         </div>
