@@ -25,7 +25,7 @@ $email = $_SESSION['email'];
             <button class="logout-button">Logout</button>
         </a>
     </header>
-    <main>
+    <div class="content">
         <section>
             <h2>Search User</h2>
             <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
@@ -64,7 +64,7 @@ $email = $_SESSION['email'];
             }
             ?>
         </section>
-    </main>
+        </div>
     <footer>
         <p>&copy; 2024 NexusTech Solutions</p>
     </footer>

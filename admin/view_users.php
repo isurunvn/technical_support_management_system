@@ -17,6 +17,9 @@ $result = $conn->query($sql);
     <title>Admin Page - NexusTech Solutions</title>
     <link rel="stylesheet" href="adminstyles.css">
     <style>
+        section{
+            width:60%;
+        }
         .user-list-container {
             margin-top: 0px;
             height: 75%; 
@@ -34,31 +37,39 @@ $result = $conn->query($sql);
             <button class="logout-button">Logout</button>
         </a>
     </header>
-    <main>
+    <div class="content">
         <section>
             <h2>All UserNames and Emails</h2>
             <div class="user-list-container">
+               
                 <table>
-                    <tr>
-                        <th>Username</th>
-                        <th>Email</th>
-                    </tr>
-                    <?php
-                    if ($result->num_rows > 0) {
-                        while ($row = $result->fetch_assoc()) {
-                            echo "<tr>";
-                            echo "<td>" . $row["username"] . "</td>";
-                            echo "<td>" . $row["email"] . "</td>";
-                            echo "</tr>";
-                        }
-                    } else {
-                        echo "<tr><td colspan='2'>0 results</td></tr>";
-                    }
-                    ?>
-                </table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Username</th>
+                                <th>Email</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php
+                            if ($result->num_rows > 0) {
+                                while ($row = $result->fetch_assoc()) {
+                                    echo "<tr>";
+                                    echo "<td>" . $row['id'] . "</td>"; 
+                                    echo "<td>" . $row['username'] . "</td>";
+                                    echo "<td>" . $row['email'] . "</td>";
+                                    echo "</tr>";
+                                }
+                            } else {
+                                echo "<tr><td colspan='7'>No users found</td></tr>";
+                            }
+                            ?>
+                        </tbody>
+                    </table>
+
             </div>
         </section>
-    </main>
+                        </div>
     <footer>
         <p>&copy; 2024 NexusTech Solutions</p>
     </footer>

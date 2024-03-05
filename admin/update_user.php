@@ -26,7 +26,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['update_user'])) {
     }
 }
 
-// Retrieve user details to pre-fill the form fields
 if (isset($_POST['user_id'])) {
     $user_id = $_POST['user_id'];
     $sql = "SELECT * FROM users WHERE id='$user_id'";
@@ -47,6 +46,9 @@ if (isset($_POST['user_id'])) {
 <head>
     <title>Update User - NexusTech Solutions</title>
     <link rel="stylesheet" href="adminstyles.css">
+    <style>
+        
+    </style>
 </head>
 <body>
     <header>
@@ -58,7 +60,7 @@ if (isset($_POST['user_id'])) {
             <button class="logout-button">Logout</button>
         </a>
     </header>
-    <main>
+    <div class="content">
         <section>
             <h2>Update User</h2>
             <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
@@ -77,7 +79,7 @@ if (isset($_POST['user_id'])) {
                 </div>            
             </form>
         </section>
-    </main>
+    </div>
     <footer>
         <p>&copy; 2024 NexusTech Solutions</p>
     </footer>

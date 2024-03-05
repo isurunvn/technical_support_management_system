@@ -28,13 +28,12 @@
         </div>
         <div class="nav-bar-context">
             <ul class="nav">
-                <li><span><a href="">Home</a></span></li>
-                <li><span><a href="">Tech Services</a></span></li>
-                <li><span><a href="">Ticket Submission</a></span></li>
-                <li><span><a href="">Downloads</a></span></li>
-                <li><span><a href="">FAQs</a></span></li>
-                <li><span><a href="">Contact Us</a></span></li>
-                <li><span><a href="">About Us</a></span></li>
+                <li><span><a href="../home.php">Home</a></span></li>
+                <li><span><a href="../kb/kb.php">Tech Services</a></span></li>
+                <li><span><a href="../aboutUs/Issu_Submission_Form.php">Ticket Submission</a></span></li>
+                <li><span><a href="../faq/faq.php">FAQs</a></span></li>
+                <li><span><a href="../contactUs/contactUsAdd.php">Contact Us</a></span></li>
+                <li><span><a href="../aboutUs/About Us.php">About Us</a></span></li>
             </ul>
             <button class="user-button"><i class="fa-solid fa-user"></i>  user</button>
         </div>
@@ -125,7 +124,7 @@
 <?php
 	if(isset($_POST['submit'])){
 
-	$sql = "INSERT INTO contact_us (ID,name,email,contactNumber,comments) VALUES ('".$_POST['ID']."','".$_POST['name']."','".$_POST['email']."','".$_POST['contactNumber']."','".$_POST['comments']."')";
+	$sql = "INSERT INTO contact_us (name,email,contactNumber,comments) VALUES ('".$_POST['name']."','".$_POST['email']."','".$_POST['contactNumber']."','".$_POST['comments']."')";
 
 	$result = mysqli_query($connection,$sql);
 	if($result)

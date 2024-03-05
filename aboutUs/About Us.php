@@ -1,3 +1,10 @@
+<?php
+session_start(); 
+
+$username = $_SESSION['username'];
+$email = $_SESSION['email'];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,11 +29,11 @@
                 <div class="nav-bar-context">
                     <ul class="nav">
                         <li><span><a href="../home.php">Home</a></span></li>
-                        <li><span><a href="../kb/kb.html">Tech Services</a></span></li>
+                        <li><span><a href="../kb/kb.php">Tech Services</a></span></li>
                         <li><span><a href="Issu_Submission_Form.php">Issue Submission</a></span></li>
-                        <li><span><a href="../faq/faq.html">FAQs</a></span></li>
-                        <li><span><a href="../ContactUs/contacts.html">Contact Us</a></span></li>
-                        <li><span><a href="About Us.html">About Us</a></span></li>
+                        <li><span><a href="../faq/faq.php">FAQs</a></span></li>
+                        <li><span><a href="../ContactUs/contactUsAdd.php">Contact Us</a></span></li>
+                        <li><span><a href="About Us.php">About Us</a></span></li>
                     </ul>
                     <div class="user-dropdown">
                         <button class="user-button"><i class="fa-solid fa-user"><p><?php echo $username; ?></p></i></button>
