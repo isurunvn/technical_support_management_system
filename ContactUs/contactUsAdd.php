@@ -125,7 +125,7 @@
 <?php
 	if(isset($_POST['submit'])){
 
-	$sql = "INSERT INTO contact_us (ID,name,email,contactNumber,comments) VALUES ('".$_POST['ID']."','".$_POST['name']."','".$_POST['email']."','".$_POST['contactNumber']."','".$_POST['comments']."')";
+	$sql = "INSERT INTO contact_us (name,email,contactNumber,comments) VALUES ('".$_POST['name']."','".$_POST['email']."','".$_POST['contactNumber']."','".$_POST['comments']."')";
 
 	$result = mysqli_query($connection,$sql);
 	if($result)
