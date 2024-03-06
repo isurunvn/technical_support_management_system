@@ -72,7 +72,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <div class="user-dropdown">
                         <button class="user-button"><i class="fa-solid fa-user"><p><?php echo $username; ?></p></i></button>
                         <div class="dropdown-content">
-                            <a href="Entry/entry.html">Logout</a>
+                            <a href="../Entry/entry.html">Logout</a>
                         </div>
                     </div>            
                 </div>
