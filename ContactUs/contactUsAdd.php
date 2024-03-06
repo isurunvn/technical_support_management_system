@@ -1,5 +1,6 @@
 <?php
-session_start(); // Start the session
+session_start(); 
+require_once('connect.php');
 
 // Check if user is logged in
 if (!isset($_SESSION['username'])) {
@@ -8,9 +9,34 @@ if (!isset($_SESSION['username'])) {
     exit;
 }
 
-// Access username and email from session
 $username = $_SESSION['username'];
 $email = $_SESSION['email'];
+?>
+
+<?php
+	if(isset($_POST['submit'])){
+        $name = $_POST['name'];
+        $email = $_POST['email'];
+        $contactNumber = $_POST['contactNumber'];
+        $comments = $_POST['comments'];
+
+        // Escape user inputs for security
+        $name = mysqli_real_escape_string($connection, $name);
+        $email = mysqli_real_escape_string($connection, $email);
+        $contactNumber = mysqli_real_escape_string($connection, $contactNumber);
+        $comments = mysqli_real_escape_string($connection, $comments);
+
+        // SQL query to insert data
+        $sql = "INSERT INTO contact (name, email, contactNumber, comments) VALUES ('$name', '$email', '$contactNumber', '$comments')";
+        
+        // Execute query and check for success
+        if(mysqli_query($connection, $sql)){
+            echo "<script>alert('Submitted Successfully');</script>";
+        } else {
+            echo "Error: " . mysqli_error($connection);
+        }
+    }
+
 ?>
 
 <!DOCTYPE html>
@@ -131,17 +157,4 @@ $email = $_SESSION['email'];
     </div>
 </body>
 </html>
-<?php
-	if(isset($_POST['submit'])){
 
-        $sql = "INSERT INTO contact (name,email,contactNumber,comments) VALUES ('".$_POST['name']."','".$_POST['email']."','".$_POST['contactNumber']."','".$_POST['comments']."')";
-    
-        $result = mysqli_query($connection,$sql);
-        if($result)
-            echo"<script> alert('Submitted Sucessfully'); </script>";
-            else
-            echo"failed";
-    
-    }
-
-?>
