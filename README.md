@@ -15,13 +15,10 @@ Database: Mysql
 To run this project first install the XAMPP server and clone the project into the 'htdocs' folder in the 'C/XAMPP' folder. Then run the Apache and Mysql servers from XAMPP server and 
 go to the phpmyadmin dashboard and create a database named as 'nexustech'. Then import the 'nexustech.sql' file which is provided in this project to that created database. 
 After successfully creating the database you can access the web site using 'http://localhost/technical_support_management_system/Entry/entry.html' url.
+
 [To login as an admin use username='nexus', password='n123' | To login as a normal user you can signUp with your credentials]
 
 Project contributors:
- Tharusha Nemantha
- Isuru Naveen
- Sandith Moras
- Dulmini Nureka
- Januli Nanayakkara
+ Isuru Naveen, Tharusha Nemantha, Sandith Moras, Dulmini Nureka, Januli Nanayakkara
 
-(finalized, 7th March 2024 @UCSC)
+(finalized, 6th March 2024 @UCSC)
