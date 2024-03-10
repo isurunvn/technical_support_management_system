@@ -1,0 +1,323 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script&family=Ubuntu:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script&family=Ubuntu:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script&family=Roboto&family=Ubuntu:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Oleo+Script&family=Roboto&family=Ubuntu:wght@500&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Ubuntu', 'sans-serif';
+}
+
+body{
+    font-size: 14px;
+}
+
+/*Header*/
+.nav-outer{
+    width: 100vw;
+    height: 70px;
+    background-color: rgba(142, 68, 173, 0.8);
+    display: flex;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+}
+
+.logo-outer{
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-outer>img{
+    height: 65px;
+}
+
+.nav-bar-context{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.nav{
+    list-style: none;
+    display: flex;
+}
+
+.nav>li>span>a{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.nav>li{
+    border-right: 1px solid white;
+    padding: 0 25px;
+    border-bottom: 2px solid transparent;
+    transition: 0.65s ease-in-out;
+
+}
+
+.nav>li:last-child{        /* >li: nth-child(3) */
+    border-right: none;
+    padding-right: 0;
+}
+
+.nav>li:hover{
+    border-color: white;
+}
+
+.user-dropdown {
+    position: relative;
+}
+.nav>li>span>a:hover{
+    color: #f5cd79;
+}
+
+.user-button{
+    padding: 6px 12px;
+    margin: 0 25px;
+    background: none;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.user-button:hover{
+    background-color: #f39c12;
+    color: white;
+    transform: scale(1.1);
+}
+.user-button > p{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 100;
+    font-family: 'Segoe UI', 'cursive';
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(142, 68, 173, 0.8);
+    border-radius: 10px;
+    min-width: 120px;
+    z-index: 1;
+    top: 100%;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f39c12;
+    border-radius: 10px;
+}
+
+.user-dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/*Content css*/
+.bg{
+    width: 100vw;
+    height: 100vh;
+    background-image: url("https://img.freepik.com/premium-photo/contact-us-concept-business-woman-hand-pointing-icon-email-customer-service-call-center_2034-1944.jpg");
+    background-size: cover;
+    background-position: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    filter: blur(4px);
+    z-index: -1;
+} 
+.container{
+    width: 80%;
+    margin: 20px auto;
+    color: #5B218F;
+    margin-bottom: 10px;
+}
+
+.contact-box{
+    background: #fff;
+    display: flex;
+    opacity: 0.9;
+    left: 200px;
+    top: 70px;
+}
+
+.contact-left{
+    flex-basis: 60%;
+    padding: 40px 60px;
+    color: #000;
+    background: #CA97F7;
+    width: 600px;
+}
+
+.contact-right{
+    flex-basis: 40%;
+    padding: 40px 80px;
+    background: #932DED;
+    color: #000;
+}
+.heading{
+    padding: 100px 0px 0px 0px;
+}
+.heading h1{
+    margin-bottom: 2px;
+}
+
+.heading p{
+    margin-bottom: 40px;
+}
+
+fieldset{
+    width: 100%;
+    padding: 8px;
+    font-weight: bold;
+    border: 2px solid #000;
+}
+
+legend{
+    padding-left: 10px;
+}
+
+input{
+    border: none;
+    border-bottom: 1px solid #000;
+    outline: none;
+    padding-bottom: 5px;
+    background: #CA97F7;
+}
+
+textarea{
+    width: 95%;
+    border: 1px solid #000;
+    outline: none;
+    padding: 10px;
+    box-sizing: border-box;
+    background: #CA97F7;
+}
+
+button{
+    background: #A249F1;
+    width: 100px;
+    border: none;
+    outline: none;
+    color: #fff;
+    height: 35px;
+    border-radius: 30px;
+    margin-top: 20px;
+    box-shadow: 0px 5px 15px 0px rgba(28,0,181,0.3);
+}
+
+button:hover{
+    color: purple;
+    background-color: #A249F1;
+}
+
+.contact-left h3{
+    color: purple;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.contact-right h3{
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+tr td{
+    padding-right: 20px;
+    padding-top: 20px;
+}
+
+img.email{
+    height: 25px;
+    width: 25px;
+    margin-bottom: -7px;
+    padding-right: 5px;
+}
+
+img.connumber{
+    height: 25px;
+    width: 25px;
+    margin-bottom: -7px;
+    padding-right: 5px;
+}
+
+img.address{
+    height: 25px;
+    width: 25px;
+    margin-bottom: -7px;
+    padding-right: 5px;
+}
+
+.social_media table tr td a{
+    list-style: none;
+    display: flex;
+    height: 25px;
+    width: 25px;
+    margin-bottom: -7px;
+    padding-right: 5px;
+}
+
+/*Footer*/
+footer {
+    background-color: #d3d3d3;
+    color: #576574;
+    padding: 20px 0;
+    width: 100%;
+    margin-top: 100px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    padding: 10px;
+}
+
+.footer-section h2 {
+    font-size: 18px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 8px;
+}
+
+ul li a {
+    color: #576574;
+    text-decoration: none;
+}
+
+ul li a:hover {
+    color: #0a3d62;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px solid #8e44ad;
+}

@@ -7,17 +7,30 @@ require_once('../config.php'); ?>
 $username = $_SESSION['username'];
 $email = $_SESSION['email'];
 
-
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (isset($_POST['delete_user'])) {
         $delete_username = $_POST['delete_username'];
 
-        $sql = "DELETE FROM users WHERE username='$delete_username'";
-        
-        if ($conn->query($sql) === TRUE) {
-            echo "<script>alert('User deleted successfully');</script>";
+        // Check if the user exists in the database
+        $check_sql = "SELECT * FROM users WHERE username='$delete_username'";
+        $result = $conn->query($check_sql);
+        if ($result->num_rows > 0) {
+            // Delete related records in the issues table first
+            $delete_issues_sql = "DELETE FROM issues WHERE username='$delete_username'";
+            if ($conn->query($delete_issues_sql) === TRUE) {
+                // Proceed with deleting the user
+                $delete_user_sql = "DELETE FROM users WHERE username='$delete_username'";
+                if ($conn->query($delete_user_sql) === TRUE) {
+                    echo "<script>alert('User deleted successfully');</script>";
+                } else {
+                    echo "<script>alert('Error: " . $delete_user_sql . "<br>" . $conn->error . "');</script>";
+                }
+            } else {
+                echo "<script>alert('Error deleting related records: " . $conn->error . "');</script>";
+            }
         } else {
-            echo "<script>alert('Error: " . $sql . "<br>" . $conn->error . "');</script>";
+            // User does not exist
+            echo "<script>alert('User does not exist');</script>";
         }
     }
 }
@@ -38,7 +51,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <button class="logout-button">Logout</button>
         </a>
     </header>
-    <main>
+    <div class="content">
         <section>
             <h2>Remove Users</h2>
             <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
@@ -49,7 +62,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 </div>
             </form>
         </section>
-    </main>
+</div>
     <footer>
         <p>&copy; 2024 NexusTech Solutions</p>
     </footer>

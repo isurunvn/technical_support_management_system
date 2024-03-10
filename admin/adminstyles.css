@@ -5,6 +5,9 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f8f9fa;
+    background-image: url('adminbg.jpg'); 
+    background-size: cover;
+    background-position: center;
 }
 
 header {
@@ -24,7 +27,7 @@ header {
     margin-right: 20px;
 }
 
-main {
+.content {
     display: flex;
     justify-content: space-around;
     margin-top: 50px;
@@ -71,6 +74,19 @@ section ul li button {
     width: 100%;
     text-align: left;
     margin: 5px 0;
+    font-size: 20px;
+
+}
+
+.middle-sec ul li{
+    background-color: #8e44ad;
+    color: #fff;
+    padding: 10px 20px;
+    margin: 10px 0px;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
 input[type="text"], input[type="password"], input[type="email"], input[type="radio"] {
@@ -97,6 +113,31 @@ input[type="text"]:hover, input[type="password"]:hover, input[type="email"]:hove
 #new_role{
     padding: 5px 10px;
     border-radius: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ddd; /* Add border to the table */
+}
+
+th, td {
+    border: 1px solid #ddd; /* Add border to table cells */
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tfoot td {
+    text-align: right;
+    background-color: #f2f2f2;
 }
 
 footer {

@@ -1,8 +1,8 @@
 <?php
-$db_host = 'localhost'; // or your database host
-$db_name = 'nexustech'; // your database name
-$db_user = 'root'; // your database username
-$db_pass = ''; // your database password
+$db_host = 'localhost'; 
+$db_name = 'nexustech'; 
+$db_user = 'root'; 
+$db_pass = ''; 
 
 // Attempt to connect to the database
 $conn = new mysqli($db_host, $db_user, $db_pass, $db_name);
