@@ -9,8 +9,10 @@ System features & functionalities:
 5. Technical support
 
 Frontend technologies: HTML, CSS, JS
+
 Backend technologies: PHP, JS
-Database: Mysql
+
+Database: Mysql, phpMyAdmin
 
 To run this project first install the XAMPP server and clone the project into the 'htdocs' folder in the 'C/XAMPP' folder. Then run the Apache and Mysql servers from XAMPP server and 
 go to the phpmyadmin dashboard and create a database named as 'nexustech'. Then import the 'nexustech.sql' file which is provided in this project to that created database. 
