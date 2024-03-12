@@ -7,6 +7,11 @@ require_once('../config.php'); ?>
 $username = $_SESSION['username'];
 $email = $_SESSION['email'];
 
+if (!isset($_SESSION['username'])) {
+    header("Location: ../Entry/login.php");
+    exit;
+}
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (isset($_POST['delete_user'])) {
         $delete_username = $_POST['delete_username'];
@@ -15,7 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $check_sql = "SELECT * FROM users WHERE username='$delete_username'";
         $result = $conn->query($check_sql);
         if ($result->num_rows > 0) {
-            // Delete related records in the issues table first
+            // Delete related records in the issues & contact table first
             $delete_issues_sql = "DELETE FROM issues WHERE username='$delete_username'";
             if ($conn->query($delete_issues_sql) === TRUE) {
                 // Proceed with deleting the user
