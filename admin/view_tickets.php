@@ -6,7 +6,7 @@ $username = $_SESSION['username'];
 $email = $_SESSION['email'];
 
 if (!isset($_SESSION['username'])) {
-    header("Location: ../login.php");
+    header("Location: ../Entry/login.php");
     exit;
 }
 

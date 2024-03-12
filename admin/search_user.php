@@ -7,6 +7,11 @@ require_once('../config.php'); ?>
 $username = $_SESSION['username'];
 $email = $_SESSION['email'];
 
+if (!isset($_SESSION['username'])) {
+    header("Location: ../Entry/login.php");
+    exit;
+}
+
 ?>
 
 <!DOCTYPE html>

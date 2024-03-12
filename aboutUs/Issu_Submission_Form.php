@@ -1,20 +1,14 @@
 <?php
 session_start(); 
+require_once('../config.php');
 
 
 $username = $_SESSION['username'];
 $email = $_SESSION['email'];
- 
-$servername = "localhost"; 
-$username_db = "root"; 
-$password_db = ""; 
-$database = "nexustech"; 
 
-$conn = new mysqli($servername, $username_db, $password_db, $database);
-
-
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+if (!isset($_SESSION['username'])) {
+    header("Location: ../Entry/login.php");
+    exit;
 }
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {

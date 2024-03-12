@@ -2,10 +2,8 @@
 session_start(); 
 require_once('connect.php');
 
-// Check if user is logged in
 if (!isset($_SESSION['username'])) {
-    // Redirect to login page if not logged in
-    header("Location: ../login.php");
+    header("Location: ../Entry/login.php");
     exit;
 }
 

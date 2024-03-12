@@ -7,6 +7,11 @@ require_once('../config.php'); ?>
 $username = $_SESSION['username'];
 $email = $_SESSION['email'];
 
+if (!isset($_SESSION['username'])) {
+    header("Location: ../Entry/login.php");
+    exit;
+}
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (isset($_POST['add_user'])) {
         $new_username = $_POST['new_username'];
