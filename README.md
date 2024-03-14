@@ -1,4 +1,4 @@
-The technical support management system called "NexusTech Solutions" is a project done as the web development group project in UCSC.
+The technical support management system called "NexusTech Solutions" is a project done as the web development group(13) project in UCSC.
 
 System features & functionalities:
 
@@ -19,6 +19,8 @@ go to the phpmyadmin dashboard and create a database named as 'nexustech'. Then 
 After successfully creating the database you can access the web site using 'http://localhost/technical_support_management_system/Entry/entry.html' url.
 
 [To login as an admin use username='nexus', password='n123' | To login as a normal user you can signUp with your credentials]
+
+IMPORTANT: A stable internet connection is required for faster, smoother and better loading of each web page.
 
 Project contributors:
  Isuru Naveen, Tharusha Nemantha, Sandith Moras, Dulmini Nureka, Januli Nanayakkara
