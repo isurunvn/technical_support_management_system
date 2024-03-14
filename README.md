@@ -22,6 +22,8 @@ After successfully creating the database you can access the web site using 'http
 
 IMPORTANT: A stable internet connection is required for faster, smoother and better loading of each web page.
 
+Github link: https://github.com/isurunvn/technical_support_management_system.git
+
 Project contributors:
  Isuru Naveen, Tharusha Nemantha, Sandith Moras, Dulmini Nureka, Januli Nanayakkara
 
